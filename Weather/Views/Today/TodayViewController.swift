@@ -10,6 +10,8 @@ import UIKit
 
 class TodayViewController: BaseViewController {
     
+    public var presenter: TodayPresenterDelegate?
+    
     private let scrollView: UIScrollView = UIScrollView()
     /**
      * The ContentView is child of ScrollView, and it has the size of the screen
@@ -23,6 +25,7 @@ class TodayViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        presenter?.viewDidLoad()
     }
     
 }
@@ -85,6 +88,10 @@ extension TodayViewController {
         contentView.addConstraintsWithFormat("H:|[v0]|", views: currentWeatherInformationView)
         contentView.addConstraintsWithFormat("V:[v0][v1(\(currentWeatherInformationView.height))]", views: currentWeatherView, currentWeatherInformationView)
     }
+    
+}
+
+extension TodayViewController: TodayViewInjection {
     
 }
 

@@ -12,7 +12,7 @@ class MainTabBar: UITabBarController {
     
     private var tabBarConfigured: Bool = false
     
-    private let todayViewController: TodayViewController = TodayViewController()
+    private let todayViewController: TodayViewController = TodayRouter.setupModule()
     private let forecastViewController: ForecastViewController = ForecastViewController()
     
     override func viewWillAppear(_ animated: Bool) {

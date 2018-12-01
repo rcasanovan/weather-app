@@ -33,6 +33,10 @@
 		C8926DD121B2D00000CF19C4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DD021B2D00000CF19C4 /* UIView.swift */; };
 		C8926DD521B2D55B00CF19C4 /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DD421B2D55B00CF19C4 /* CurrentWeatherView.swift */; };
 		C8926DD721B2D56B00CF19C4 /* CurrentWeatherInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DD621B2D56B00CF19C4 /* CurrentWeatherInformationView.swift */; };
+		C8926DD921B2DFBE00CF19C4 /* TodayProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DD821B2DFBE00CF19C4 /* TodayProtocols.swift */; };
+		C8926DDB21B2DFCD00CF19C4 /* TodayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DDA21B2DFCD00CF19C4 /* TodayPresenter.swift */; };
+		C8926DDD21B2DFDC00CF19C4 /* TodayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DDC21B2DFDC00CF19C4 /* TodayRouter.swift */; };
+		C8926DDF21B2E15900CF19C4 /* TodayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 		C8926DD021B2D00000CF19C4 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C8926DD421B2D55B00CF19C4 /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
 		C8926DD621B2D56B00CF19C4 /* CurrentWeatherInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherInformationView.swift; sourceTree = "<group>"; };
+		C8926DD821B2DFBE00CF19C4 /* TodayProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProtocols.swift; sourceTree = "<group>"; };
+		C8926DDA21B2DFCD00CF19C4 /* TodayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPresenter.swift; sourceTree = "<group>"; };
+		C8926DDC21B2DFDC00CF19C4 /* TodayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRouter.swift; sourceTree = "<group>"; };
+		C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,7 +294,11 @@
 			isa = PBXGroup;
 			children = (
 				C8926DD321B2D53D00CF19C4 /* Subviewa */,
+				C8926DD821B2DFBE00CF19C4 /* TodayProtocols.swift */,
 				C8926DCB21B2CC1F00CF19C4 /* TodayViewController.swift */,
+				C8926DDA21B2DFCD00CF19C4 /* TodayPresenter.swift */,
+				C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */,
+				C8926DDC21B2DFDC00CF19C4 /* TodayRouter.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -431,6 +443,8 @@
 				C8926DA421B2A9CA00CF19C4 /* HTTPCode.swift in Sources */,
 				C8926DAA21B2A9CA00CF19C4 /* EndPoint.swift in Sources */,
 				C8926DC121B2C6CA00CF19C4 /* MainTabBar.swift in Sources */,
+				C8926DDB21B2DFCD00CF19C4 /* TodayPresenter.swift in Sources */,
+				C8926DDD21B2DFDC00CF19C4 /* TodayRouter.swift in Sources */,
 				C8926DAC21B2A9CA00CF19C4 /* WeatherRequest.swift in Sources */,
 				C8926DB321B2BA5200CF19C4 /* LocationManager.swift in Sources */,
 				C8926DD721B2D56B00CF19C4 /* CurrentWeatherInformationView.swift in Sources */,
@@ -442,9 +456,11 @@
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
 				C8926DD521B2D55B00CF19C4 /* CurrentWeatherView.swift in Sources */,
 				C8926DD121B2D00000CF19C4 /* UIView.swift in Sources */,
+				C8926DDF21B2E15900CF19C4 /* TodayInteractor.swift in Sources */,
 				C8926DA821B2A9CA00CF19C4 /* ResultError.swift in Sources */,
 				C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */,
 				C8926DC821B2CBC300CF19C4 /* BaseViewController.swift in Sources */,
+				C8926DD921B2DFBE00CF19C4 /* TodayProtocols.swift in Sources */,
 				C82B346921B2A90E00532842 /* AppDelegate.swift in Sources */,
 				C8926DA721B2A9CA00CF19C4 /* RequestProtocol.swift in Sources */,
 			);
