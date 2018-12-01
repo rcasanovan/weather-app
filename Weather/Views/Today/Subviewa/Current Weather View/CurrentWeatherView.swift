@@ -43,7 +43,7 @@ extension CurrentWeatherView {
     private func configureSubviews() {
         weatherImageView.image = UIImage(named: "ClearSkyDay")
         
-        temperatureLabel.font = UIFont.boldSystemFont(ofSize: 44.0)
+        temperatureLabel.font = UIFont.proximaNovaBoldWithSize(size: 44.0)
         temperatureLabel.textColor = .blue
         temperatureLabel.textAlignment = .center
         temperatureLabel.text = "22 C"
