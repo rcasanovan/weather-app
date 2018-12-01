@@ -86,7 +86,7 @@ class NetworkTests: XCTestCase {
     func testGetSimulatedWeather() {
         let weatherExpectation: XCTestExpectation = self.expectation(description: "weatherExpectation")
         
-        testGetWeatherWith(latitude: 39.470242, longitude: -0.376800, localJSONFile: "SimulateWeatherResponse") { (response) in
+        testGetWeatherWith(latitude: 39.470242, longitude: -0.376800, localJSONFile: "SimulatedWeatherResponse") { (response) in
             switch response {
             case .success(let weatherResponse):
                 XCTAssertTrue(weatherResponse != nil, "Impossible to get the weather response")

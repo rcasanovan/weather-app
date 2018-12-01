@@ -26,7 +26,7 @@
 		C8926DB321B2BA5200CF19C4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB221B2BA5200CF19C4 /* LocationManager.swift */; };
 		C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */; };
 		C8926DB821B2BC0C00CF19C4 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */; };
-		C8926DBC21B2BF8500CF19C4 /* SimulateWeatherResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C8926DBB21B2BF8500CF19C4 /* SimulateWeatherResponse.json */; };
+		C8926DBC21B2BF8500CF19C4 /* SimulatedWeatherResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C8926DBB21B2BF8500CF19C4 /* SimulatedWeatherResponse.json */; };
 		C8926DC121B2C6CA00CF19C4 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DC021B2C6CA00CF19C4 /* MainTabBar.swift */; };
 		C8926DC521B2CB7800CF19C4 /* CustomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DC421B2CB7800CF19C4 /* CustomTitleView.swift */; };
 		C8926DC821B2CBC300CF19C4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DC721B2CBC300CF19C4 /* BaseViewController.swift */; };
@@ -42,6 +42,10 @@
 		C8926DE221B2E50300CF19C4 /* WeatherTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE121B2E50300CF19C4 /* WeatherTitleView.swift */; };
 		C8926DE521B2F50200CF19C4 /* UnitTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */; };
 		C8926DE721B2F57C00CF19C4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE621B2F57C00CF19C4 /* Device.swift */; };
+		C8926DED21B309EF00CF19C4 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DE921B309EF00CF19C4 /* ProximaNova-Semibold.otf */; };
+		C8926DEE21B309EF00CF19C4 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEA21B309EF00CF19C4 /* ProximaNova-Light.otf */; };
+		C8926DEF21B309EF00CF19C4 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEB21B309EF00CF19C4 /* ProximaNova-Bold.otf */; };
+		C8926DF021B309EF00CF19C4 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEC21B309EF00CF19C4 /* ProximaNova-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +84,7 @@
 		C8926DB221B2BA5200CF19C4 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalNotifications.swift; sourceTree = "<group>"; };
 		C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
-		C8926DBB21B2BF8500CF19C4 /* SimulateWeatherResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SimulateWeatherResponse.json; sourceTree = "<group>"; };
+		C8926DBB21B2BF8500CF19C4 /* SimulatedWeatherResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SimulatedWeatherResponse.json; sourceTree = "<group>"; };
 		C8926DC021B2C6CA00CF19C4 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		C8926DC421B2CB7800CF19C4 /* CustomTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleView.swift; sourceTree = "<group>"; };
 		C8926DC721B2CBC300CF19C4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,10 @@
 		C8926DE121B2E50300CF19C4 /* WeatherTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTitleView.swift; sourceTree = "<group>"; };
 		C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTemperature.swift; sourceTree = "<group>"; };
 		C8926DE621B2F57C00CF19C4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C8926DE921B309EF00CF19C4 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		C8926DEA21B309EF00CF19C4 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		C8926DEB21B309EF00CF19C4 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		C8926DEC21B309EF00CF19C4 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		D82083FE4A4CD02C10311F4F /* libPods-Weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,17 +280,18 @@
 		C8926DB921B2BF6600CF19C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C8926DBA21B2BF6D00CF19C4 /* Simulate Weather Response */,
+				C8926DE821B309C900CF19C4 /* Fonts */,
+				C8926DBA21B2BF6D00CF19C4 /* Simulated Weather Response */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C8926DBA21B2BF6D00CF19C4 /* Simulate Weather Response */ = {
+		C8926DBA21B2BF6D00CF19C4 /* Simulated Weather Response */ = {
 			isa = PBXGroup;
 			children = (
-				C8926DBB21B2BF8500CF19C4 /* SimulateWeatherResponse.json */,
+				C8926DBB21B2BF8500CF19C4 /* SimulatedWeatherResponse.json */,
 			);
-			path = "Simulate Weather Response";
+			path = "Simulated Weather Response";
 			sourceTree = "<group>";
 		};
 		C8926DBE21B2C69800CF19C4 /* Views */ = {
@@ -393,6 +402,17 @@
 			path = UnitTemperature;
 			sourceTree = "<group>";
 		};
+		C8926DE821B309C900CF19C4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DEB21B309EF00CF19C4 /* ProximaNova-Bold.otf */,
+				C8926DEA21B309EF00CF19C4 /* ProximaNova-Light.otf */,
+				C8926DEC21B309EF00CF19C4 /* ProximaNova-Regular.otf */,
+				C8926DE921B309EF00CF19C4 /* ProximaNova-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -479,9 +499,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8926DEE21B309EF00CF19C4 /* ProximaNova-Light.otf in Resources */,
+				C8926DF021B309EF00CF19C4 /* ProximaNova-Regular.otf in Resources */,
 				C82B347321B2A90F00532842 /* LaunchScreen.storyboard in Resources */,
 				C82B347021B2A90F00532842 /* Assets.xcassets in Resources */,
-				C8926DBC21B2BF8500CF19C4 /* SimulateWeatherResponse.json in Resources */,
+				C8926DEF21B309EF00CF19C4 /* ProximaNova-Bold.otf in Resources */,
+				C8926DBC21B2BF8500CF19C4 /* SimulatedWeatherResponse.json in Resources */,
+				C8926DED21B309EF00CF19C4 /* ProximaNova-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
