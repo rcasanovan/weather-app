@@ -93,7 +93,7 @@ extension CurrentWeatherView {
         addConstraint(weatherTitleViewCenterLayout)
         
         addConstraintsWithFormat("H:|-20.0-[v0]-20.0-|", views: temperatureLabel)
-        addConstraintsWithFormat("V:[v0][v1(46.0)]", views: weatherTitleView, temperatureLabel)
+        addConstraintsWithFormat("V:[v0]-10.0-[v1(46.0)]", views: weatherTitleView, temperatureLabel)
         
         addConstraintsWithFormat("H:|-20.0-[v0]-20.0-|", views: weatherLabel)
         addConstraintsWithFormat("V:[v0][v1]|", views: temperatureLabel, weatherLabel)

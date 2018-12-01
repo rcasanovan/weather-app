@@ -39,6 +39,12 @@ class Device {
         return "°F"
     }
     
+    public static func degToCompass(_ deg: CGFloat) -> String {
+        let val = floor(Double((deg / 22.5) + 0.5))
+        let arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+        return arr[Int(val.truncatingRemainder(dividingBy: 16.0))]
+    }
+    
     public static func screenWidth() -> CGFloat {
         return UIScreen.main.bounds.width
     }

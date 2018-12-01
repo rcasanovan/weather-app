@@ -14,12 +14,20 @@ public struct TodayViewModel {
     public let currentTemperature: String
     public let currentWeatherIconName: String?
     public let weatherDescription: String
+    public let humidity: String
+    public let pressure: String
+    public let wind: String
+    public let windDirection: String
     
-    init(cityName: String, currentTemperature: String, currentWeatherIconName: String?, weatherDescription: String) {
+    init(cityName: String, currentTemperature: String, currentWeatherIconName: String?, weatherDescription: String, humidity: String, pressure: String, wind: String, windDirection: String) {
         self.cityName = cityName
         self.currentTemperature = currentTemperature
         self.currentWeatherIconName = currentWeatherIconName
         self.weatherDescription = weatherDescription
+        self.humidity = humidity
+        self.pressure = pressure
+        self.wind = wind
+        self.windDirection = windDirection
     }
     
     public static func getViewModelWith(weatherResponse: WeatherResponse) -> TodayViewModel {
@@ -40,7 +48,35 @@ public struct TodayViewModel {
             weatherDescription = weather.description
         }
         
-        return TodayViewModel(cityName: cityName, currentTemperature: currentTemperatureTitle, currentWeatherIconName: currentWeatherIconName, weatherDescription: weatherDescription)
+        var humidity: String = "-"
+        if let currentTemperature = weatherResponse.list.first {
+            humidity = "\(currentTemperature.main.humidity)%"
+        }
+        
+        var pressure: String = "-"
+        if let currentTemperature = weatherResponse.list.first {
+            pressure = "\(currentTemperature.main.pressure) hPa"
+        }
+        
+        var wind: String = "-"
+        if let currentTemperature = weatherResponse.list.first {
+            let unitTemperature = Device.getCurrentUnitTemperature()
+            switch unitTemperature {
+            case .celsius:
+                wind = "\(currentTemperature.wind.speed * 3.6) km/h"
+            case .fahrenheit:
+                wind = "\(currentTemperature.wind.speed) mi/h"
+            default:
+                print("do nothing...")
+            }
+        }
+        
+        var windDirection: String = "-"
+        if let currentTemperature = weatherResponse.list.first {
+            windDirection = Device.degToCompass(currentTemperature.wind.deg)
+        }
+        
+        return TodayViewModel(cityName: cityName, currentTemperature: currentTemperatureTitle, currentWeatherIconName: currentWeatherIconName, weatherDescription: weatherDescription, humidity: humidity, pressure: pressure, wind: wind, windDirection: windDirection)
     }
     
 }
