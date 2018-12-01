@@ -39,8 +39,8 @@ class RequestManager {
     }
     
     func send<T: RequestProtocol>(request: T) {
-        if let simulateResponse = request.simulateResponse, simulateResponse == true {
-            processLocalResponse(request: request)
+        if let simulatedResponseJSONFile = request.simulatedResponseJSONFile {
+            processLocalResponse(request: request, JSONFile: simulatedResponseJSONFile)
             return
         }
         
@@ -149,8 +149,8 @@ class RequestManager {
 
 extension RequestManager {
     
-    private func processLocalResponse<T: RequestProtocol>(request: T) {
-        if let path = Bundle.main.path(forResource: "SimulateWeatherResponse", ofType: "json") {
+    private func processLocalResponse<T: RequestProtocol>(request: T, JSONFile: String) {
+        if let path = Bundle.main.path(forResource: JSONFile, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let processedData = try request.processResponseData(data: data)

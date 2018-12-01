@@ -39,7 +39,7 @@ protocol RequestProtocol {
     var debugDescription: String { get }
     
     /// Simulate the API response
-    var simulateResponse: Bool? { get set }
+    var simulatedResponseJSONFile: String? { get set }
 }
 
 

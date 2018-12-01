@@ -23,18 +23,11 @@ class NetworkTests: XCTestCase {
         super.tearDown()
     }
     
-    func testGetWeatherWith(latitude: CGFloat, longitude: CGFloat, completion: @escaping getWeatherCompletionBlock) {
+    func testGetWeatherWith(latitude: CGFloat, longitude: CGFloat, localJSONFile: String? = nil, completion: @escaping getWeatherCompletionBlock) {
         var getWeatherRequest = WeatherRequest(latitude: latitude, longitude: longitude)
         
         getWeatherRequest.completion = completion
-        requestManager.send(request: getWeatherRequest)
-    }
-    
-    func testGetSimulatedWeatherWith(latitude: CGFloat, longitude: CGFloat, completion: @escaping getWeatherCompletionBlock) {
-        var getWeatherRequest = WeatherRequest(latitude: latitude, longitude: longitude)
-        
-        getWeatherRequest.completion = completion
-        getWeatherRequest.simulateResponse = true
+        getWeatherRequest.simulatedResponseJSONFile = localJSONFile
         requestManager.send(request: getWeatherRequest)
     }
     
@@ -92,7 +85,7 @@ class NetworkTests: XCTestCase {
     func testGetSimulatedWeather() {
         let weatherExpectation: XCTestExpectation = self.expectation(description: "weatherExpectation")
         
-        testGetSimulatedWeatherWith(latitude: 39.470242, longitude: -0.376800) { (response) in
+        testGetWeatherWith(latitude: 39.470242, longitude: -0.376800, localJSONFile: "SimulateWeatherResponse") { (response) in
             switch response {
             case .success(let weatherResponse):
                 XCTAssertTrue(weatherResponse != nil, "Impossible to get the weather response")
