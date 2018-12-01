@@ -15,6 +15,7 @@ struct WeatherRequest: RequestProtocol {
     var url: URL? = nil
     var encodableBody: Encodable? = nil
     var simulatedResponseJSONFile: String?
+    var verbose: Bool?
     
     init(latitude: CGFloat, longitude: CGFloat) {
         url = Endpoint.getWeatherWith(latitude: latitude, longitude: longitude).url

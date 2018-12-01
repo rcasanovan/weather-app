@@ -40,6 +40,9 @@ protocol RequestProtocol {
     
     /// Simulate the API response
     var simulatedResponseJSONFile: String? { get set }
+    
+    /// Verbose mode
+    var verbose: Bool? { get set }
 }
 
 

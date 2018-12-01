@@ -77,10 +77,12 @@ class RequestManager {
         }
         
         // Debugging
-        print(" ------------ SENDING REQUEST ------------ ")
-        print("Request: \(request.debugDescription)")
-        print("Headers: \(sessionConfiguration().httpAdditionalHeaders ?? [:])")
-        print(" ------------------------------------ ")
+        if let verbose = request.verbose, verbose == true {
+            print(" ------------ SENDING REQUEST ------------ ")
+            print("Request: \(request.debugDescription)")
+            print("Headers: \(sessionConfiguration().httpAdditionalHeaders ?? [:])")
+            print(" ------------------------------------ ")
+        }
         
         let session = URLSession(configuration: sessionConfiguration())
         let task = session.dataTask(with: httpRequest) { (serverData, responseData, error) in
