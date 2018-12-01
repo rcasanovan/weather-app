@@ -50,6 +50,7 @@
 		C8926DF621B30EB900CF19C4 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DF521B30EB900CF19C4 /* TodayViewModel.swift */; };
 		C8926DF921B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DF821B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift */; };
 		C8926DFC21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DFB21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift */; };
+		C8926DFF21B356DA00CF19C4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DFE21B356DA00CF19C4 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		C8926DF521B30EB900CF19C4 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		C8926DF821B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherInformationDatasource.swift; sourceTree = "<group>"; };
 		C8926DFB21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		C8926DFE21B356DA00CF19C4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		D82083FE4A4CD02C10311F4F /* libPods-Weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -371,6 +373,7 @@
 		C8926DCF21B2CFEC00CF19C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C8926DFD21B356CF00CF19C4 /* UIColor */,
 				C8926DF121B30A7900CF19C4 /* UIFont */,
 				C8926DE321B2F4F700CF19C4 /* UnitTemperature */,
 				C8926DD221B2D01700CF19C4 /* UIView */,
@@ -455,6 +458,14 @@
 				C8926DFB21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C8926DFD21B356CF00CF19C4 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DFE21B356DA00CF19C4 /* UIColor.swift */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -665,6 +676,7 @@
 				C8926DAA21B2A9CA00CF19C4 /* EndPoint.swift in Sources */,
 				C8926DC121B2C6CA00CF19C4 /* MainTabBar.swift in Sources */,
 				C8926DF921B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift in Sources */,
+				C8926DFF21B356DA00CF19C4 /* UIColor.swift in Sources */,
 				C8926DDB21B2DFCD00CF19C4 /* TodayPresenter.swift in Sources */,
 				C8926DE221B2E50300CF19C4 /* WeatherTitleView.swift in Sources */,
 				C8926DDD21B2DFDC00CF19C4 /* TodayRouter.swift in Sources */,
