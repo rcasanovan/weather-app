@@ -13,12 +13,13 @@ struct WeatherResponse: Decodable {
     let message: CGFloat
     let cnt: UInt
     let list: [WeatherListResponse]
+    let city: WeatherCityResponse
 }
 
 struct WeatherListResponse: Decodable {
     let dt: Int64
     let main: WeatherListMainResponse
-    let weather: WeatherListWeatherResponse
+    let weather: [WeatherListWeatherResponse]
     let clouds: WeatherListCloudsResponse
     let wind: WeatherListWindResponse
     let dt_txt: String
@@ -48,5 +49,18 @@ struct WeatherListCloudsResponse: Decodable {
 
 struct WeatherListWindResponse: Decodable {
     let speed: CGFloat
-    let deg: Int
+    let deg: CGFloat
+}
+
+struct WeatherCityResponse: Decodable {
+    let id: Int64
+    let name: String
+    let coord: WeatherCityCoordResponse
+    let country: String
+    let population: Int64
+}
+
+struct WeatherCityCoordResponse: Decodable {
+    let lat: CGFloat
+    let lon: CGFloat
 }

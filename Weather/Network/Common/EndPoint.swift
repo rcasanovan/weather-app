@@ -17,13 +17,13 @@ protocol EndpointProtocol: RawRepresentable where RawValue == String {
  */
 private struct Url {
     
-    static let baseUrl: String = "api.openweathermap.org/data/"
-    static let version: String = "2.5/"
+    static let baseUrl: String = "http://api.openweathermap.org/data/"
+    static let version: String = "2.5"
     static let appID: String = "28bc6d7ace6e643065fd95756fae8b9c"
     
     struct Fields {
-        static let latitude: String = "lan"
-        static let longitude: String = "long"
+        static let latitude: String = "lat"
+        static let longitude: String = "lon"
         static let appID: String = "APPID"
     }
     
