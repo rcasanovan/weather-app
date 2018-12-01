@@ -30,6 +30,7 @@
 		C8926DC821B2CBC300CF19C4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DC721B2CBC300CF19C4 /* BaseViewController.swift */; };
 		C8926DCC21B2CC1F00CF19C4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DCB21B2CC1F00CF19C4 /* TodayViewController.swift */; };
 		C8926DCE21B2CC4A00CF19C4 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DCD21B2CC4A00CF19C4 /* ForecastViewController.swift */; };
+		C8926DD121B2D00000CF19C4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DD021B2D00000CF19C4 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		C8926DC721B2CBC300CF19C4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C8926DCB21B2CC1F00CF19C4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		C8926DCD21B2CC4A00CF19C4 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		C8926DD021B2D00000CF19C4 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C82B346821B2A90E00532842 /* AppDelegate.swift */,
+				C8926DCF21B2CFEC00CF19C4 /* Extensions */,
 				C8926DB021B2BA3C00CF19C4 /* Utils */,
 				C8926DBE21B2C69800CF19C4 /* Views */,
 				C8926D9421B2A9CA00CF19C4 /* Network */,
@@ -291,6 +294,22 @@
 			path = Forecast;
 			sourceTree = "<group>";
 		};
+		C8926DCF21B2CFEC00CF19C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DD221B2D01700CF19C4 /* UIView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C8926DD221B2D01700CF19C4 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DD021B2D00000CF19C4 /* UIView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -406,6 +425,7 @@
 				C8926DAB21B2A9CA00CF19C4 /* WeatherResponse.swift in Sources */,
 				C8926DCE21B2CC4A00CF19C4 /* ForecastViewController.swift in Sources */,
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
+				C8926DD121B2D00000CF19C4 /* UIView.swift in Sources */,
 				C8926DA821B2A9CA00CF19C4 /* ResultError.swift in Sources */,
 				C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */,
 				C8926DC821B2CBC300CF19C4 /* BaseViewController.swift in Sources */,
