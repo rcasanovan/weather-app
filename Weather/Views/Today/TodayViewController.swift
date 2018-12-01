@@ -22,6 +22,7 @@ extension TodayViewController {
     
     private func setupViews() {
         view.backgroundColor = .white
+        showTopSeparator = true
         
         configureNavigationBar()
         

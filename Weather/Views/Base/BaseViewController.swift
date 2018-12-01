@@ -12,8 +12,15 @@ class BaseViewController: UIViewController {
     
     private let topSeparatorImageView: UIImageView = UIImageView()
     
+    public var showTopSeparator: Bool = false {
+        didSet {
+            topSeparatorImageView.isHidden = !showTopSeparator
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
     }
     
 }
@@ -23,6 +30,7 @@ extension BaseViewController {
     
     private func setupViews() {
         view.backgroundColor = .white
+        navigationController?.navigationBar.isTranslucent = false
         
         configureSubviews()
         addSubviews()
@@ -30,6 +38,7 @@ extension BaseViewController {
     
     private func configureSubviews() {
         topSeparatorImageView.image = UIImage(named: "TopSeparator")
+        topSeparatorImageView.isHidden = true
     }
     
 }
@@ -37,8 +46,19 @@ extension BaseViewController {
 // MARK: - Layout & constraints
 extension BaseViewController {
     
+    private struct Layout {
+        
+        struct TopSeparatorImageView {
+            static let height: CGFloat = 2.0
+        }
+        
+    }
+    
     private func addSubviews() {
         view.addSubview(topSeparatorImageView)
+        
+        view.addConstraintsWithFormat("H:|[v0]|", views: topSeparatorImageView)
+        view.addConstraintsWithFormat("V:|[v0(\(Layout.TopSeparatorImageView.height))]", views: topSeparatorImageView)
     }
     
 }
