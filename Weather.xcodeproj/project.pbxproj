@@ -46,6 +46,7 @@
 		C8926DEE21B309EF00CF19C4 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEA21B309EF00CF19C4 /* ProximaNova-Light.otf */; };
 		C8926DEF21B309EF00CF19C4 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEB21B309EF00CF19C4 /* ProximaNova-Bold.otf */; };
 		C8926DF021B309EF00CF19C4 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEC21B309EF00CF19C4 /* ProximaNova-Regular.otf */; };
+		C8926DF321B30A8C00CF19C4 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DF221B30A8C00CF19C4 /* UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		C8926DEA21B309EF00CF19C4 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
 		C8926DEB21B309EF00CF19C4 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
 		C8926DEC21B309EF00CF19C4 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		C8926DF221B30A8C00CF19C4 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		D82083FE4A4CD02C10311F4F /* libPods-Weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -362,6 +364,7 @@
 		C8926DCF21B2CFEC00CF19C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C8926DF121B30A7900CF19C4 /* UIFont */,
 				C8926DE321B2F4F700CF19C4 /* UnitTemperature */,
 				C8926DD221B2D01700CF19C4 /* UIView */,
 			);
@@ -411,6 +414,14 @@
 				C8926DE921B309EF00CF19C4 /* ProximaNova-Semibold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C8926DF121B30A7900CF19C4 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DF221B30A8C00CF19C4 /* UIFont.swift */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,6 +650,7 @@
 				C8926DA821B2A9CA00CF19C4 /* ResultError.swift in Sources */,
 				C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */,
 				C8926DC821B2CBC300CF19C4 /* BaseViewController.swift in Sources */,
+				C8926DF321B30A8C00CF19C4 /* UIFont.swift in Sources */,
 				C8926DD921B2DFBE00CF19C4 /* TodayProtocols.swift in Sources */,
 				C82B346921B2A90E00532842 /* AppDelegate.swift in Sources */,
 				C8926DA721B2A9CA00CF19C4 /* RequestProtocol.swift in Sources */,
