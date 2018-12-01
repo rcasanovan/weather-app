@@ -23,4 +23,13 @@ class Device {
         return "imperial"
     }
     
+    public static func getWeatherSymbol() -> String {
+        let currentUnit = UnitTemperature.current
+        if currentUnit == .celsius {
+            return "°C"
+        }
+        
+        return "°F"
+    }
+    
 }

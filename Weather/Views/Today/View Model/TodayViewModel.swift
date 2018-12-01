@@ -11,14 +11,22 @@ import UIKit
 public struct TodayViewModel {
     
     public let cityName: String
+    public let currentTemperature: String
     
-    init(cityName: String) {
+    init(cityName: String, currentTemperature: String) {
         self.cityName = cityName
+        self.currentTemperature = currentTemperature
     }
     
     public static func getViewModelWith(weatherResponse: WeatherResponse) -> TodayViewModel {
         let cityName = "\(weatherResponse.city.name), \(weatherResponse.city.country)"
-        return TodayViewModel(cityName: cityName)
+        
+        var currentTemperatureTitle: String = "-"
+        if let currentTemperature = weatherResponse.list.first {
+            currentTemperatureTitle = "\(Int(currentTemperature.main.temp)) \(Device.getWeatherSymbol())"
+        }
+        
+        return TodayViewModel(cityName: cityName, currentTemperature: currentTemperatureTitle)
     }
     
 }

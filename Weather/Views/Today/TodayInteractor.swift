@@ -20,6 +20,7 @@ extension TodayInteractor {
         var getWeatherRequest = WeatherRequest(latitude: latitude, longitude: longitude)
         
         getWeatherRequest.completion = completion
+        getWeatherRequest.verbose = true
         requestManager.send(request: getWeatherRequest)
     }
     
@@ -32,7 +33,6 @@ extension TodayInteractor: TodayInteractorDelegate {
     }
     
     func getCurrentWeather(completion: @escaping getWeatherInteractorCompletionBlock) {
-        LocationManager.sharedInstance.simulateLocation = true
         guard let currenLocation = LocationManager.sharedInstance.getCurrentLocation() else {
             completion(nil, false, nil)
             return

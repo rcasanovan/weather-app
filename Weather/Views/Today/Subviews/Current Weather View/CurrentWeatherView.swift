@@ -30,6 +30,7 @@ class CurrentWeatherView: UIView {
     
     public func bindWithViewModel(_ viewModel: TodayViewModel) {
         weatherTitleView.title = viewModel.cityName
+        temperatureLabel.text = viewModel.currentTemperature
     }
     
 }
@@ -50,7 +51,6 @@ extension CurrentWeatherView {
         temperatureLabel.font = UIFont.proximaNovaBoldWithSize(size: 44.0)
         temperatureLabel.textColor = .blue
         temperatureLabel.textAlignment = .center
-        temperatureLabel.text = "22 C"
     }
     
 }
