@@ -1,16 +1,20 @@
 PODS:
+  - CollectionViewCenteredFlowLayout (1.0.1)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - CollectionViewCenteredFlowLayout (~> 1.0.1)
   - SVProgressHUD (~> 2.2.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CollectionViewCenteredFlowLayout
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  CollectionViewCenteredFlowLayout: 339b935be4d8578c59e448c8906117a07c657d85
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 18c5cd74eca06e0c56fbd7c0674f4d5949d655f0
+PODFILE CHECKSUM: 7f50953577ac013eff61e8bc4ea6b6c517449e73
 
 COCOAPODS: 1.5.3

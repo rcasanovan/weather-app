@@ -6,7 +6,7 @@
 //  Copyright © 2018 Pijp. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Device {
     
@@ -37,6 +37,14 @@ class Device {
         }
         
         return "°F"
+    }
+    
+    public static func screenWidth() -> CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    public static func screenHeight() -> CGFloat {
+        return UIScreen.main.bounds.height
     }
     
 }

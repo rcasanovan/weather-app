@@ -9,6 +9,8 @@ inhibit_all_warnings!
 def weatherPods
     #SVProgressHUD
     pod 'SVProgressHUD', '~> 2.2.5'
+    
+    pod 'CollectionViewCenteredFlowLayout', '~> 1.0.1'
 end
 
 target 'Weather' do

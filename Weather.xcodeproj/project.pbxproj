@@ -48,6 +48,8 @@
 		C8926DF021B309EF00CF19C4 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEC21B309EF00CF19C4 /* ProximaNova-Regular.otf */; };
 		C8926DF321B30A8C00CF19C4 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DF221B30A8C00CF19C4 /* UIFont.swift */; };
 		C8926DF621B30EB900CF19C4 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DF521B30EB900CF19C4 /* TodayViewModel.swift */; };
+		C8926DF921B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DF821B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift */; };
+		C8926DFC21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DFB21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		C8926DEC21B309EF00CF19C4 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		C8926DF221B30A8C00CF19C4 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		C8926DF521B30EB900CF19C4 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
+		C8926DF821B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherInformationDatasource.swift; sourceTree = "<group>"; };
+		C8926DFB21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		D82083FE4A4CD02C10311F4F /* libPods-Weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -386,7 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				C8926DE021B2E4C400CF19C4 /* Current Weather View */,
-				C8926DD621B2D56B00CF19C4 /* CurrentWeatherInformationView.swift */,
+				C8926DF721B3307300CF19C4 /* Current Weather Information View */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -433,6 +437,24 @@
 				C8926DF521B30EB900CF19C4 /* TodayViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		C8926DF721B3307300CF19C4 /* Current Weather Information View */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DFA21B3350700CF19C4 /* Cell */,
+				C8926DD621B2D56B00CF19C4 /* CurrentWeatherInformationView.swift */,
+				C8926DF821B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift */,
+			);
+			path = "Current Weather Information View";
+			sourceTree = "<group>";
+		};
+		C8926DFA21B3350700CF19C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DFB21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -642,11 +664,13 @@
 				C8926DA421B2A9CA00CF19C4 /* HTTPCode.swift in Sources */,
 				C8926DAA21B2A9CA00CF19C4 /* EndPoint.swift in Sources */,
 				C8926DC121B2C6CA00CF19C4 /* MainTabBar.swift in Sources */,
+				C8926DF921B3336D00CF19C4 /* CurrentWeatherInformationDatasource.swift in Sources */,
 				C8926DDB21B2DFCD00CF19C4 /* TodayPresenter.swift in Sources */,
 				C8926DE221B2E50300CF19C4 /* WeatherTitleView.swift in Sources */,
 				C8926DDD21B2DFDC00CF19C4 /* TodayRouter.swift in Sources */,
 				C8926DAC21B2A9CA00CF19C4 /* WeatherRequest.swift in Sources */,
 				C8926DB321B2BA5200CF19C4 /* LocationManager.swift in Sources */,
+				C8926DFC21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift in Sources */,
 				C8926DD721B2D56B00CF19C4 /* CurrentWeatherInformationView.swift in Sources */,
 				C8926DCC21B2CC1F00CF19C4 /* TodayViewController.swift in Sources */,
 				C8926DA321B2A9CA00CF19C4 /* RequestManager.swift in Sources */,
