@@ -57,7 +57,7 @@ public struct WeatherCityResponse: Decodable {
     let name: String
     let coord: WeatherCityCoordResponse
     let country: String
-    let population: Int64
+    let population: Int64?
 }
 
 public struct WeatherCityCoordResponse: Decodable {

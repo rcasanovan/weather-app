@@ -13,6 +13,7 @@ class CurrentWeatherView: UIView {
     private let weatherImageView: UIImageView = UIImageView()
     private let weatherTitleView: WeatherTitleView = WeatherTitleView()
     private let temperatureLabel: UILabel = UILabel()
+    private let weatherLabel: UILabel = UILabel()
     
     public var height: CGFloat {
         return 300.0
@@ -29,8 +30,12 @@ class CurrentWeatherView: UIView {
     }
     
     public func bindWithViewModel(_ viewModel: TodayViewModel) {
+        if let currentWeatherIconName = viewModel.currentWeatherIconName {
+            weatherImageView.image = UIImage(named: currentWeatherIconName)
+        }
         weatherTitleView.title = viewModel.cityName
         temperatureLabel.text = viewModel.currentTemperature
+        weatherLabel.text = viewModel.weatherDescription
     }
     
 }
@@ -46,11 +51,13 @@ extension CurrentWeatherView {
     }
     
     private func configureSubviews() {
-        weatherImageView.image = UIImage(named: "ClearSkyDay")
-        
         temperatureLabel.font = UIFont.proximaNovaBoldWithSize(size: 44.0)
         temperatureLabel.textColor = .blue
         temperatureLabel.textAlignment = .center
+        
+        weatherLabel.font = UIFont.proximaNovaBoldWithSize(size: 20.0)
+        weatherLabel.textColor = .blue
+        weatherLabel.textAlignment = .center
     }
     
 }
@@ -72,6 +79,7 @@ extension CurrentWeatherView {
         addSubview(weatherImageView)
         addSubview(weatherTitleView)
         addSubview(temperatureLabel)
+        addSubview(weatherLabel)
         
         addConstraintsWithFormat("V:|-\(Layout.WeatherImageView.top)-[v0(\(Layout.WeatherImageView.height))]", views: weatherImageView)
         addConstraintsWithFormat("H:[v0(\(Layout.WeatherImageView.width))]", views: weatherImageView)
@@ -85,7 +93,10 @@ extension CurrentWeatherView {
         addConstraint(weatherTitleViewCenterLayout)
         
         addConstraintsWithFormat("H:|-20.0-[v0]-20.0-|", views: temperatureLabel)
-        addConstraintsWithFormat("V:[v0][v1]|", views: weatherTitleView, temperatureLabel)
+        addConstraintsWithFormat("V:[v0][v1(46.0)]", views: weatherTitleView, temperatureLabel)
+        
+        addConstraintsWithFormat("H:|-20.0-[v0]-20.0-|", views: weatherLabel)
+        addConstraintsWithFormat("V:[v0][v1]|", views: temperatureLabel, weatherLabel)
         
         
     }

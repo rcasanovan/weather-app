@@ -26,6 +26,7 @@ private struct Url {
         static let longitude: String = "lon"
         static let appID: String = "APPID"
         static let units: String = "units"
+        static let language: String = "lang"
     }
     
 }
@@ -36,7 +37,7 @@ enum Endpoint: EndpointProtocol {
     var rawValue: String {
         switch self {
         case .getWeatherWith(let latitude, let longitude):
-            return "/forecast?\(Url.Fields.latitude)=\(latitude)&\(Url.Fields.longitude)=\(longitude)&\(Url.Fields.appID)=\(Url.appID)&\(Url.Fields.units)=\(Device.getStringCurrentUnitTemperature())"
+            return "/forecast?\(Url.Fields.latitude)=\(latitude)&\(Url.Fields.longitude)=\(longitude)&\(Url.Fields.appID)=\(Url.appID)&\(Url.Fields.units)=\(Device.getStringCurrentUnitTemperature())&\(Url.Fields.language)=\(Device.getDeviceLanguage())"
         }
     }
     

@@ -10,6 +10,13 @@ import Foundation
 
 class Device {
     
+    public static func getDeviceLanguage() -> String {
+        guard let languageCode = NSLocale.current.languageCode else {
+            return "en"
+        }
+        return "es"
+    }
+    
     public static func getCurrentUnitTemperature() -> UnitTemperature {
         return UnitTemperature.current
     }
