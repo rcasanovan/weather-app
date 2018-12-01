@@ -28,6 +28,7 @@ class NetworkTests: XCTestCase {
         
         getWeatherRequest.completion = completion
         getWeatherRequest.simulatedResponseJSONFile = localJSONFile
+        getWeatherRequest.verbose = true
         requestManager.send(request: getWeatherRequest)
     }
     

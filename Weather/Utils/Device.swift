@@ -14,4 +14,13 @@ class Device {
         return UnitTemperature.current
     }
     
+    public static func getStringCurrentUnitTemperature() -> String {
+        let currentUnit = UnitTemperature.current
+        if currentUnit == .celsius {
+            return "metric"
+        }
+        
+        return "imperial"
+    }
+    
 }
