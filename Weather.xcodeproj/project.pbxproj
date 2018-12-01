@@ -31,6 +31,8 @@
 		C8926DCC21B2CC1F00CF19C4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DCB21B2CC1F00CF19C4 /* TodayViewController.swift */; };
 		C8926DCE21B2CC4A00CF19C4 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DCD21B2CC4A00CF19C4 /* ForecastViewController.swift */; };
 		C8926DD121B2D00000CF19C4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DD021B2D00000CF19C4 /* UIView.swift */; };
+		C8926DD521B2D55B00CF19C4 /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DD421B2D55B00CF19C4 /* CurrentWeatherView.swift */; };
+		C8926DD721B2D56B00CF19C4 /* CurrentWeatherInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DD621B2D56B00CF19C4 /* CurrentWeatherInformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		C8926DCB21B2CC1F00CF19C4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		C8926DCD21B2CC4A00CF19C4 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		C8926DD021B2D00000CF19C4 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C8926DD421B2D55B00CF19C4 /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
+		C8926DD621B2D56B00CF19C4 /* CurrentWeatherInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherInformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +285,7 @@
 		C8926DC921B2CBF200CF19C4 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				C8926DD321B2D53D00CF19C4 /* Subviewa */,
 				C8926DCB21B2CC1F00CF19C4 /* TodayViewController.swift */,
 			);
 			path = Today;
@@ -308,6 +313,15 @@
 				C8926DD021B2D00000CF19C4 /* UIView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		C8926DD321B2D53D00CF19C4 /* Subviewa */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DD421B2D55B00CF19C4 /* CurrentWeatherView.swift */,
+				C8926DD621B2D56B00CF19C4 /* CurrentWeatherInformationView.swift */,
+			);
+			path = Subviewa;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,12 +433,14 @@
 				C8926DC121B2C6CA00CF19C4 /* MainTabBar.swift in Sources */,
 				C8926DAC21B2A9CA00CF19C4 /* WeatherRequest.swift in Sources */,
 				C8926DB321B2BA5200CF19C4 /* LocationManager.swift in Sources */,
+				C8926DD721B2D56B00CF19C4 /* CurrentWeatherInformationView.swift in Sources */,
 				C8926DCC21B2CC1F00CF19C4 /* TodayViewController.swift in Sources */,
 				C8926DA321B2A9CA00CF19C4 /* RequestManager.swift in Sources */,
 				C8926DA921B2A9CA00CF19C4 /* IMRequestErrors.swift in Sources */,
 				C8926DAB21B2A9CA00CF19C4 /* WeatherResponse.swift in Sources */,
 				C8926DCE21B2CC4A00CF19C4 /* ForecastViewController.swift in Sources */,
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
+				C8926DD521B2D55B00CF19C4 /* CurrentWeatherView.swift in Sources */,
 				C8926DD121B2D00000CF19C4 /* UIView.swift in Sources */,
 				C8926DA821B2A9CA00CF19C4 /* ResultError.swift in Sources */,
 				C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */,
