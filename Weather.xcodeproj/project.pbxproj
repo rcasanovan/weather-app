@@ -38,6 +38,7 @@
 		C8926DDD21B2DFDC00CF19C4 /* TodayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DDC21B2DFDC00CF19C4 /* TodayRouter.swift */; };
 		C8926DDF21B2E15900CF19C4 /* TodayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */; };
 		C8926DE221B2E50300CF19C4 /* WeatherTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE121B2E50300CF19C4 /* WeatherTitleView.swift */; };
+		C8926DE521B2F50200CF19C4 /* UnitTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		C8926DDC21B2DFDC00CF19C4 /* TodayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRouter.swift; sourceTree = "<group>"; };
 		C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInteractor.swift; sourceTree = "<group>"; };
 		C8926DE121B2E50300CF19C4 /* WeatherTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTitleView.swift; sourceTree = "<group>"; };
+		C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTemperature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 		C8926DCF21B2CFEC00CF19C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C8926DE321B2F4F700CF19C4 /* UnitTemperature */,
 				C8926DD221B2D01700CF19C4 /* UIView */,
 			);
 			path = Extensions;
@@ -345,6 +348,14 @@
 				C8926DD421B2D55B00CF19C4 /* CurrentWeatherView.swift */,
 			);
 			path = "Current Weather View";
+			sourceTree = "<group>";
+		};
+		C8926DE321B2F4F700CF19C4 /* UnitTemperature */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */,
+			);
+			path = UnitTemperature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +474,7 @@
 				C8926DCC21B2CC1F00CF19C4 /* TodayViewController.swift in Sources */,
 				C8926DA321B2A9CA00CF19C4 /* RequestManager.swift in Sources */,
 				C8926DA921B2A9CA00CF19C4 /* IMRequestErrors.swift in Sources */,
+				C8926DE521B2F50200CF19C4 /* UnitTemperature.swift in Sources */,
 				C8926DAB21B2A9CA00CF19C4 /* WeatherResponse.swift in Sources */,
 				C8926DCE21B2CC4A00CF19C4 /* ForecastViewController.swift in Sources */,
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
