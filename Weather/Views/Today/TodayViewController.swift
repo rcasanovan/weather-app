@@ -93,5 +93,9 @@ extension TodayViewController {
 
 extension TodayViewController: TodayViewInjection {
     
+    func loadWeatherInformationWithViewModel(_ viewModel: TodayViewModel) {
+        currentWeatherView.bindWithViewModel(viewModel)
+    }
+    
 }
 

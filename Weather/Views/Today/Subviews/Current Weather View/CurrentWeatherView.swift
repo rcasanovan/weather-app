@@ -28,6 +28,10 @@ class CurrentWeatherView: UIView {
         setupViews()
     }
     
+    public func bindWithViewModel(_ viewModel: TodayViewModel) {
+        weatherTitleView.title = viewModel.cityName
+    }
+    
 }
 
 // MARK: - Setup views

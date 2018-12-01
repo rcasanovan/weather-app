@@ -10,6 +10,7 @@ import Foundation
 
 // View / Presenter
 protocol TodayViewInjection : class {
+    func loadWeatherInformationWithViewModel(_ viewModel: TodayViewModel)
 }
 
 protocol TodayPresenterDelegate : class {
@@ -18,8 +19,11 @@ protocol TodayPresenterDelegate : class {
 
 // Presenter / Interactor
 
+typealias getWeatherInteractorCompletionBlock = (_ viewModel: TodayViewModel?, _ success: Bool, _ error: ResultError?) -> Void
+
 protocol TodayInteractorDelegate : class {
     func requestLocationAuthorizationIfNeeded()
+    func getCurrentWeather(completion: @escaping getWeatherInteractorCompletionBlock)
 }
 
 // Presenter / Router

@@ -23,6 +23,12 @@ class WeatherTitleView: UIView {
         setupViews()
     }
     
+    public var title: String? {
+        didSet {
+            cityLabel.text = title
+        }
+    }
+    
 }
 
 // MARK: - Setup views
@@ -44,7 +50,6 @@ extension WeatherTitleView {
         
         cityLabel.font = UIFont.proximaNovaLightWithSize(size: 17.0)
         cityLabel.textColor = .black
-        cityLabel.text = "Valencia, Spain"
     }
     
 }
