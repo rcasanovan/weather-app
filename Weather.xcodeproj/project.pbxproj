@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C82B346921B2A90E00532842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B346821B2A90E00532842 /* AppDelegate.swift */; };
-		C82B346B21B2A90E00532842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B346A21B2A90E00532842 /* ViewController.swift */; };
-		C82B346E21B2A90E00532842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82B346C21B2A90E00532842 /* Main.storyboard */; };
 		C82B347021B2A90F00532842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82B346F21B2A90F00532842 /* Assets.xcassets */; };
 		C82B347321B2A90F00532842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82B347121B2A90F00532842 /* LaunchScreen.storyboard */; };
 		C8926DA321B2A9CA00CF19C4 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926D9621B2A9CA00CF19C4 /* RequestManager.swift */; };
@@ -27,6 +25,7 @@
 		C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */; };
 		C8926DB821B2BC0C00CF19C4 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */; };
 		C8926DBC21B2BF8500CF19C4 /* SimulateWeatherResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C8926DBB21B2BF8500CF19C4 /* SimulateWeatherResponse.json */; };
+		C8926DC121B2C6CA00CF19C4 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DC021B2C6CA00CF19C4 /* MainTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +41,6 @@
 /* Begin PBXFileReference section */
 		C82B346521B2A90E00532842 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82B346821B2A90E00532842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C82B346A21B2A90E00532842 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C82B346D21B2A90E00532842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C82B346F21B2A90F00532842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C82B347221B2A90F00532842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82B347421B2A90F00532842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +61,7 @@
 		C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalNotifications.swift; sourceTree = "<group>"; };
 		C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		C8926DBB21B2BF8500CF19C4 /* SimulateWeatherResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SimulateWeatherResponse.json; sourceTree = "<group>"; };
+		C8926DC021B2C6CA00CF19C4 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				C82B346821B2A90E00532842 /* AppDelegate.swift */,
-				C82B346A21B2A90E00532842 /* ViewController.swift */,
-				C82B346C21B2A90E00532842 /* Main.storyboard */,
 				C8926DB021B2BA3C00CF19C4 /* Utils */,
+				C8926DBE21B2C69800CF19C4 /* Views */,
 				C8926D9421B2A9CA00CF19C4 /* Network */,
 				C8926DB921B2BF6600CF19C4 /* Resources */,
 				C82B346F21B2A90F00532842 /* Assets.xcassets */,
@@ -226,6 +223,22 @@
 			path = "Simulate Weather Response";
 			sourceTree = "<group>";
 		};
+		C8926DBE21B2C69800CF19C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DBF21B2C6AA00CF19C4 /* Main TabBar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C8926DBF21B2C6AA00CF19C4 /* Main TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DC021B2C6CA00CF19C4 /* MainTabBar.swift */,
+			);
+			path = "Main TabBar";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,7 +323,6 @@
 			files = (
 				C82B347321B2A90F00532842 /* LaunchScreen.storyboard in Resources */,
 				C82B347021B2A90F00532842 /* Assets.xcassets in Resources */,
-				C82B346E21B2A90E00532842 /* Main.storyboard in Resources */,
 				C8926DBC21B2BF8500CF19C4 /* SimulateWeatherResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,12 +344,12 @@
 				C8926DA621B2A9CA00CF19C4 /* Result.swift in Sources */,
 				C8926DA421B2A9CA00CF19C4 /* HTTPCode.swift in Sources */,
 				C8926DAA21B2A9CA00CF19C4 /* EndPoint.swift in Sources */,
+				C8926DC121B2C6CA00CF19C4 /* MainTabBar.swift in Sources */,
 				C8926DAC21B2A9CA00CF19C4 /* WeatherRequest.swift in Sources */,
 				C8926DB321B2BA5200CF19C4 /* LocationManager.swift in Sources */,
 				C8926DA321B2A9CA00CF19C4 /* RequestManager.swift in Sources */,
 				C8926DA921B2A9CA00CF19C4 /* IMRequestErrors.swift in Sources */,
 				C8926DAB21B2A9CA00CF19C4 /* WeatherResponse.swift in Sources */,
-				C82B346B21B2A90E00532842 /* ViewController.swift in Sources */,
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
 				C8926DA821B2A9CA00CF19C4 /* ResultError.swift in Sources */,
 				C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */,
@@ -366,14 +378,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C82B346C21B2A90E00532842 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C82B346D21B2A90E00532842 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C82B347121B2A90F00532842 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

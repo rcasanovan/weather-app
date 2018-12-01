@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        showInitialView()
         return true
     }
 
@@ -41,6 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+
+}
+
+//MARK: - Navigation methods
+extension AppDelegate  {
+    
+    private func showInitialView() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let mainTabBar = MainTabBar()
+        
+        self.window?.rootViewController = mainTabBar
+        self.window?.makeKeyAndVisible()
+    }
 
 }
 
