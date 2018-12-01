@@ -12,8 +12,8 @@ class MainTabBar: UITabBarController {
     
     private var tabBarConfigured: Bool = false
     
-    private let todayViewController: UIViewController = UIViewController()
-    private let forecastViewController: UIViewController = UIViewController()
+    private let todayViewController: TodayViewController = TodayViewController()
+    private let forecastViewController: ForecastViewController = ForecastViewController()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
