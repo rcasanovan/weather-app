@@ -44,7 +44,7 @@ extension TodayViewController {
     }
     
     private func configureSubviews() {
-        scrollView.backgroundColor = .black
+        scrollView.backgroundColor = .clear
         scrollView.clipsToBounds = false
         scrollView.alwaysBounceVertical = true
     }

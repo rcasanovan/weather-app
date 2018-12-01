@@ -12,6 +12,7 @@ class CurrentWeatherView: UIView {
     
     private let weatherImageView: UIImageView = UIImageView()
     private let weatherTitleView: WeatherTitleView = WeatherTitleView()
+    private let temperatureLabel: UILabel = UILabel()
     
     public var height: CGFloat {
         return 300.0
@@ -41,6 +42,11 @@ extension CurrentWeatherView {
     
     private func configureSubviews() {
         weatherImageView.image = UIImage(named: "ClearSkyDay")
+        
+        temperatureLabel.font = UIFont.boldSystemFont(ofSize: 44.0)
+        temperatureLabel.textColor = .blue
+        temperatureLabel.textAlignment = .center
+        temperatureLabel.text = "22 C"
     }
     
 }
@@ -61,6 +67,7 @@ extension CurrentWeatherView {
     private func addSubviews() {
         addSubview(weatherImageView)
         addSubview(weatherTitleView)
+        addSubview(temperatureLabel)
         
         addConstraintsWithFormat("V:|-\(Layout.WeatherImageView.top)-[v0(\(Layout.WeatherImageView.height))]", views: weatherImageView)
         addConstraintsWithFormat("H:[v0(\(Layout.WeatherImageView.width))]", views: weatherImageView)
@@ -72,6 +79,9 @@ extension CurrentWeatherView {
         addConstraintsWithFormat("H:[v0(<=300.0)]", views: weatherTitleView)
         let weatherTitleViewCenterLayout = NSLayoutConstraint(item: weatherTitleView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 1.0)
         addConstraint(weatherTitleViewCenterLayout)
+        
+        addConstraintsWithFormat("H:|-20.0-[v0]-20.0-|", views: temperatureLabel)
+        addConstraintsWithFormat("V:[v0][v1]|", views: weatherTitleView, temperatureLabel)
         
         
     }
