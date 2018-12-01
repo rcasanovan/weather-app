@@ -37,6 +37,9 @@ protocol RequestProtocol {
     var queryString: [String: String]? { get }
     
     var debugDescription: String { get }
+    
+    /// Simulate the API response
+    var simulateResponse: Bool? { get set }
 }
 
 

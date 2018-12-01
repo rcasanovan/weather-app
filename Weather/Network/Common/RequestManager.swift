@@ -39,6 +39,11 @@ class RequestManager {
     }
     
     func send<T: RequestProtocol>(request: T) {
+        if let simulateResponse = request.simulateResponse, simulateResponse == true {
+            processLocalResponse(request: request)
+            return
+        }
+        
         // Check reachability
         guard isConnected else {
             send(request: request, after: defaultRetryTime)
@@ -140,4 +145,20 @@ class RequestManager {
         
         task.resume()
     }
+}
+
+extension RequestManager {
+    
+    private func processLocalResponse<T: RequestProtocol>(request: T) {
+        if let path = Bundle.main.path(forResource: "SimulateWeatherResponse", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let processedData = try request.processResponseData(data: data)
+                request.completion?(Result.success(processedData))
+            } catch {
+                request.completion?(Result.failure(ResultError.parsingError(message: error.localizedDescription)))
+            }
+        }
+    }
+    
 }

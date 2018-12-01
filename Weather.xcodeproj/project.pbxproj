@@ -26,6 +26,7 @@
 		C8926DB321B2BA5200CF19C4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB221B2BA5200CF19C4 /* LocationManager.swift */; };
 		C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */; };
 		C8926DB821B2BC0C00CF19C4 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */; };
+		C8926DBC21B2BF8500CF19C4 /* SimulateWeatherResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C8926DBB21B2BF8500CF19C4 /* SimulateWeatherResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		C8926DB221B2BA5200CF19C4 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalNotifications.swift; sourceTree = "<group>"; };
 		C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		C8926DBB21B2BF8500CF19C4 /* SimulateWeatherResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SimulateWeatherResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				C82B346C21B2A90E00532842 /* Main.storyboard */,
 				C8926DB021B2BA3C00CF19C4 /* Utils */,
 				C8926D9421B2A9CA00CF19C4 /* Network */,
+				C8926DB921B2BF6600CF19C4 /* Resources */,
 				C82B346F21B2A90F00532842 /* Assets.xcassets */,
 				C82B347121B2A90F00532842 /* LaunchScreen.storyboard */,
 				C82B347421B2A90F00532842 /* Info.plist */,
@@ -207,6 +210,22 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		C8926DB921B2BF6600CF19C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DBA21B2BF6D00CF19C4 /* Simulate Weather Response */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C8926DBA21B2BF6D00CF19C4 /* Simulate Weather Response */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DBB21B2BF8500CF19C4 /* SimulateWeatherResponse.json */,
+			);
+			path = "Simulate Weather Response";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,6 +311,7 @@
 				C82B347321B2A90F00532842 /* LaunchScreen.storyboard in Resources */,
 				C82B347021B2A90F00532842 /* Assets.xcassets in Resources */,
 				C82B346E21B2A90E00532842 /* Main.storyboard in Resources */,
+				C8926DBC21B2BF8500CF19C4 /* SimulateWeatherResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
