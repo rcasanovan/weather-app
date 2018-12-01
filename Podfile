@@ -6,15 +6,15 @@ inhibit_all_warnings!
 
 #link_with 'Weather', 'WeatherTests'
 
-def WeatherPods
+def weatherPods
     #SVProgressHUD
     pod 'SVProgressHUD', '~> 2.2.5'
 end
 
 target 'Weather' do
-    WeatherPods
+    weatherPods
 end
 
 target 'WeatherTests' do
-    WeatherPods
+    weatherPods
 end
