@@ -39,6 +39,7 @@
 		C8926DDF21B2E15900CF19C4 /* TodayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */; };
 		C8926DE221B2E50300CF19C4 /* WeatherTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE121B2E50300CF19C4 /* WeatherTitleView.swift */; };
 		C8926DE521B2F50200CF19C4 /* UnitTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */; };
+		C8926DE721B2F57C00CF19C4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE621B2F57C00CF19C4 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInteractor.swift; sourceTree = "<group>"; };
 		C8926DE121B2E50300CF19C4 /* WeatherTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTitleView.swift; sourceTree = "<group>"; };
 		C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTemperature.swift; sourceTree = "<group>"; };
+		C8926DE621B2F57C00CF19C4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			children = (
 				C8926DB121B2BA5200CF19C4 /* Location Manager */,
 				C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */,
+				C8926DE621B2F57C00CF19C4 /* Device.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				C8926DCE21B2CC4A00CF19C4 /* ForecastViewController.swift in Sources */,
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
 				C8926DD521B2D55B00CF19C4 /* CurrentWeatherView.swift in Sources */,
+				C8926DE721B2F57C00CF19C4 /* Device.swift in Sources */,
 				C8926DD121B2D00000CF19C4 /* UIView.swift in Sources */,
 				C8926DDF21B2E15900CF19C4 /* TodayInteractor.swift in Sources */,
 				C8926DA821B2A9CA00CF19C4 /* ResultError.swift in Sources */,
