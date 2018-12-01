@@ -23,6 +23,9 @@
 		C8926DAB21B2A9CA00CF19C4 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DA121B2A9CA00CF19C4 /* WeatherResponse.swift */; };
 		C8926DAC21B2A9CA00CF19C4 /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DA221B2A9CA00CF19C4 /* WeatherRequest.swift */; };
 		C8926DAF21B2B0F600CF19C4 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DAE21B2B0F600CF19C4 /* NetworkTests.swift */; };
+		C8926DB321B2BA5200CF19C4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB221B2BA5200CF19C4 /* LocationManager.swift */; };
+		C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */; };
+		C8926DB821B2BC0C00CF19C4 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		C8926DA121B2A9CA00CF19C4 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		C8926DA221B2A9CA00CF19C4 /* WeatherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		C8926DAE21B2B0F600CF19C4 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		C8926DB221B2BA5200CF19C4 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalNotifications.swift; sourceTree = "<group>"; };
+		C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 				C82B346821B2A90E00532842 /* AppDelegate.swift */,
 				C82B346A21B2A90E00532842 /* ViewController.swift */,
 				C82B346C21B2A90E00532842 /* Main.storyboard */,
+				C8926DB021B2BA3C00CF19C4 /* Utils */,
 				C8926D9421B2A9CA00CF19C4 /* Network */,
 				C82B346F21B2A90F00532842 /* Assets.xcassets */,
 				C82B347121B2A90F00532842 /* LaunchScreen.storyboard */,
@@ -111,6 +118,7 @@
 		C82B347C21B2A90F00532842 /* WeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				C8926DB621B2BBE800CF19C4 /* Location */,
 				C8926DAD21B2B08500CF19C4 /* Network */,
 				C82B347F21B2A90F00532842 /* Info.plist */,
 			);
@@ -172,6 +180,31 @@
 				C8926DAE21B2B0F600CF19C4 /* NetworkTests.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C8926DB021B2BA3C00CF19C4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DB121B2BA5200CF19C4 /* Location Manager */,
+				C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C8926DB121B2BA5200CF19C4 /* Location Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DB221B2BA5200CF19C4 /* LocationManager.swift */,
+			);
+			path = "Location Manager";
+			sourceTree = "<group>";
+		};
+		C8926DB621B2BBE800CF19C4 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				C8926DB721B2BC0C00CF19C4 /* LocationTests.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,12 +313,14 @@
 				C8926DA421B2A9CA00CF19C4 /* HTTPCode.swift in Sources */,
 				C8926DAA21B2A9CA00CF19C4 /* EndPoint.swift in Sources */,
 				C8926DAC21B2A9CA00CF19C4 /* WeatherRequest.swift in Sources */,
+				C8926DB321B2BA5200CF19C4 /* LocationManager.swift in Sources */,
 				C8926DA321B2A9CA00CF19C4 /* RequestManager.swift in Sources */,
 				C8926DA921B2A9CA00CF19C4 /* IMRequestErrors.swift in Sources */,
 				C8926DAB21B2A9CA00CF19C4 /* WeatherResponse.swift in Sources */,
 				C82B346B21B2A90E00532842 /* ViewController.swift in Sources */,
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
 				C8926DA821B2A9CA00CF19C4 /* ResultError.swift in Sources */,
+				C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */,
 				C82B346921B2A90E00532842 /* AppDelegate.swift in Sources */,
 				C8926DA721B2A9CA00CF19C4 /* RequestProtocol.swift in Sources */,
 			);
@@ -295,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8926DB821B2BC0C00CF19C4 /* LocationTests.swift in Sources */,
 				C8926DAF21B2B0F600CF19C4 /* NetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
