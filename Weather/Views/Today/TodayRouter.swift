@@ -17,7 +17,3 @@ class TodayRouter {
     }
     
 }
-
-extension TodayRouter: TodayRouterDelegate {
-    
-}

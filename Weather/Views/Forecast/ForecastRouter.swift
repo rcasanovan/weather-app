@@ -17,7 +17,3 @@ class ForecastRouter {
     }
     
 }
-
-extension ForecastRouter: ForecastRouterDelegate {
-    
-}

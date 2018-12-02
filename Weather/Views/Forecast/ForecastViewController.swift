@@ -42,7 +42,7 @@ extension ForecastViewController {
     
     private func configureNavigationBar() {
         let customTitleView = CustomTitleView()
-        customTitleView.titleColor = .black
+        customTitleView.titleColor = UIColor.colorWithHex(hex: "333333")
         customTitleView.setTitle(NSLocalizedString("forecast.title", comment: ""))
         navigationItem.titleView = customTitleView
         

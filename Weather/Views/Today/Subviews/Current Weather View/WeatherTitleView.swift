@@ -48,8 +48,8 @@ extension WeatherTitleView {
     private func configureSubviews() {
         locationArrowImageView.image = UIImage(named: "CurrentLocationArrow")
         
-        cityLabel.font = UIFont.proximaNovaLightWithSize(size: 17.0)
-        cityLabel.textColor = .black
+        cityLabel.font = UIFont.proximaNovaSemiboldWithSize(size: 17.0)
+        cityLabel.textColor = UIColor.colorWithHex(hex: "333333")
     }
     
 }

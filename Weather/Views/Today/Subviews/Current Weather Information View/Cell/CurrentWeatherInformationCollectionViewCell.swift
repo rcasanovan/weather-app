@@ -72,9 +72,9 @@ extension CurrentWeatherInformationCollectionViewCell {
     private func configureView() {
         backgroundColor = .clear
         
-        descriptionLabel.font = UIFont.proximaNovaLightWithSize(size: 16.0)
+        descriptionLabel.font = UIFont.proximaNovaSemiboldWithSize(size: 14.0)
         descriptionLabel.textAlignment = .center
-        descriptionLabel.textColor = .black
+        descriptionLabel.textColor = UIColor.colorWithHex(hex: "333333")
     }
     
     /**

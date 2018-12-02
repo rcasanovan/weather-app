@@ -111,6 +111,7 @@ extension AppDelegate  {
 extension AppDelegate {
     
     private func configureFirebase() {
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
     }
     
