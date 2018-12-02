@@ -14,7 +14,7 @@ class Device {
         guard let languageCode = NSLocale.current.languageCode else {
             return "en"
         }
-        return "es"
+        return languageCode
     }
     
     public static func getCurrentUnitTemperature() -> UnitTemperature {
