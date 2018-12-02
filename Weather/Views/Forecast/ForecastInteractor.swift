@@ -10,3 +10,7 @@ import Foundation
 
 class ForecastInteractor {
 }
+
+extension ForecastInteractor: ForecastInteractorDelegate {
+    
+}

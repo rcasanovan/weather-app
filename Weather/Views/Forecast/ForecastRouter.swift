@@ -6,7 +6,18 @@
 //  Copyright © 2018 Pijp. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ForecastRouter {
+    
+    public static func setupModule(navigationController: UINavigationController? = nil) -> ForecastViewController {
+        let forecastVC = ForecastViewController()
+        forecastVC.presenter = ForecastPresenter(view: forecastVC, navigationController: navigationController)
+        return forecastVC
+    }
+    
+}
+
+extension ForecastRouter: ForecastRouterDelegate {
+    
 }

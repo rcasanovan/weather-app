@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+// View / Presenter
+protocol ForecastViewInjection : class {
+}
+
+protocol ForecastPresenterDelegate : class {
+}
+
+// Presenter / Interactor
+protocol ForecastInteractorDelegate : class {
+}
+
+// Presenter / Router
+protocol ForecastRouterDelegate : class {
+}

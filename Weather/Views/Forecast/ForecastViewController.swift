@@ -10,6 +10,8 @@ import Foundation
 
 class ForecastViewController: BaseViewController {
     
+    public var presenter: ForecastPresenterDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -47,5 +49,9 @@ extension ForecastViewController {
     
     private func addSubviews() {
     }
+    
+}
+
+extension ForecastViewController: ForecastViewInjection {
     
 }
