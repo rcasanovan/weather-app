@@ -65,7 +65,7 @@ extension WeatherTitleView {
         addSubview(cityLabel)
         
         addConstraintsWithFormat("H:|[v0(12.0)]", views: locationArrowImageView)
-        addConstraintsWithFormat("V:|[v0(12.0)]", views: locationArrowImageView)
+        addConstraintsWithFormat("V:|-4.0-[v0(12.0)]", views: locationArrowImageView)
         
         addConstraintsWithFormat("H:[v0]-10.0-[v1]|", views: locationArrowImageView, cityLabel)
         addConstraintsWithFormat("V:|[v0]|", views: cityLabel)

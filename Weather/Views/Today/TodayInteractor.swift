@@ -20,7 +20,6 @@ extension TodayInteractor {
         var getWeatherRequest = WeatherRequest(latitude: latitude, longitude: longitude)
         
         getWeatherRequest.completion = completion
-        getWeatherRequest.verbose = true
         requestManager.send(request: getWeatherRequest)
     }
     
