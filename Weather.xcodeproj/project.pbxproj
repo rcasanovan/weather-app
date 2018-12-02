@@ -57,6 +57,8 @@
 		C8926E0C21B3DA3200CF19C4 /* LocalWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E0B21B3DA3100CF19C4 /* LocalWeatherManager.swift */; };
 		C8926E0E21B3DA6100CF19C4 /* LocalWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E0D21B3DA6100CF19C4 /* LocalWeather.swift */; };
 		C8926E1121B3EC9600CF19C4 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E1021B3EC9600CF19C4 /* ForecastViewModel.swift */; };
+		C8926E1321B3FAF300CF19C4 /* ForecastDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E1221B3FAF300CF19C4 /* ForecastDatasource.swift */; };
+		C8926E1621B3FBAE00CF19C4 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E1521B3FBAE00CF19C4 /* ForecastTableViewCell.swift */; };
 		FD0CAFF5B60C1750404E1533 /* Pods_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F78B60E204CDD6636819C5 /* Pods_WeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,8 @@
 		C8926E0B21B3DA3100CF19C4 /* LocalWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeatherManager.swift; sourceTree = "<group>"; };
 		C8926E0D21B3DA6100CF19C4 /* LocalWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeather.swift; sourceTree = "<group>"; };
 		C8926E1021B3EC9600CF19C4 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
+		C8926E1221B3FAF300CF19C4 /* ForecastDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDatasource.swift; sourceTree = "<group>"; };
+		C8926E1521B3FBAE00CF19C4 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -380,9 +384,11 @@
 		C8926DCA21B2CC0700CF19C4 /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
+				C8926E1421B3FB9700CF19C4 /* Cell */,
 				C8926E0F21B3EC8300CF19C4 /* View Model */,
 				C8926E0021B3D4D200CF19C4 /* ForecastProtocols.swift */,
 				C8926DCD21B2CC4A00CF19C4 /* ForecastViewController.swift */,
+				C8926E1221B3FAF300CF19C4 /* ForecastDatasource.swift */,
 				C8926E0221B3D4E900CF19C4 /* ForecastPresenter.swift */,
 				C8926E0421B3D4F900CF19C4 /* ForecastInteractor.swift */,
 				C8926E0621B3D50500CF19C4 /* ForecastRouter.swift */,
@@ -519,6 +525,14 @@
 				C8926E1021B3EC9600CF19C4 /* ForecastViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		C8926E1421B3FB9700CF19C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C8926E1521B3FBAE00CF19C4 /* ForecastTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -752,10 +766,12 @@
 				C8926DFC21B3353D00CF19C4 /* CurrentWeatherInformationCollectionViewCell.swift in Sources */,
 				C8926DD721B2D56B00CF19C4 /* CurrentWeatherInformationView.swift in Sources */,
 				C8926DCC21B2CC1F00CF19C4 /* TodayViewController.swift in Sources */,
+				C8926E1621B3FBAE00CF19C4 /* ForecastTableViewCell.swift in Sources */,
 				C8926DA321B2A9CA00CF19C4 /* RequestManager.swift in Sources */,
 				C8926DA921B2A9CA00CF19C4 /* IMRequestErrors.swift in Sources */,
 				C8926DE521B2F50200CF19C4 /* UnitTemperature.swift in Sources */,
 				C8926DAB21B2A9CA00CF19C4 /* WeatherResponse.swift in Sources */,
+				C8926E1321B3FAF300CF19C4 /* ForecastDatasource.swift in Sources */,
 				C8926DCE21B2CC4A00CF19C4 /* ForecastViewController.swift in Sources */,
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
 				C8926E0321B3D4E900CF19C4 /* ForecastPresenter.swift in Sources */,

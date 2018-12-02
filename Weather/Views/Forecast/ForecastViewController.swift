@@ -6,11 +6,15 @@
 //  Copyright © 2018 Pijp. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ForecastViewController: BaseViewController {
     
     public var presenter: ForecastPresenterDelegate?
+    
+    private let weatherListContainerView: UIView = UIView()
+    private var weatherListTableView: UITableView?
+    private var datasource: ForecastDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,28 @@ extension ForecastViewController {
         customTitleView.titleColor = .black
         customTitleView.setTitle("Forecast")
         navigationItem.titleView = customTitleView
+        
+        weatherListTableView = UITableView(frame: weatherListContainerView.bounds, style: .plain)
+        weatherListTableView?.tableFooterView = UIView()
+        weatherListTableView?.estimatedRowHeight = 88.0
+        weatherListTableView?.rowHeight = UITableView.automaticDimension
+        weatherListTableView?.invalidateIntrinsicContentSize()
+        weatherListTableView?.allowsSelection = false
+        weatherListTableView?.backgroundColor = .clear
+        
+        registerCells()
+        setupDatasource()
+    }
+    
+    private func registerCells() {
+        weatherListTableView?.register(ForecastTableViewCell.self, forCellReuseIdentifier: ForecastTableViewCell.identifier)
+    }
+    
+    private func setupDatasource() {
+        if let weatherListTableView = weatherListTableView {
+            datasource = ForecastDatasource()
+            weatherListTableView.dataSource = datasource
+        }
     }
     
 }
@@ -49,6 +75,17 @@ extension ForecastViewController {
 extension ForecastViewController {
     
     private func addSubviews() {
+        view.addSubview(weatherListContainerView)
+        
+        let top = showTopSeparator ? 2.0 : 0.0
+        view.addConstraintsWithFormat("H:|[v0]|", views: weatherListContainerView)
+        view.addConstraintsWithFormat("V:|-\(top)-[v0]|", views: weatherListContainerView)
+        
+        if let weatherListTableView = weatherListTableView {
+            weatherListContainerView.addSubview(weatherListTableView)
+            weatherListContainerView.addConstraintsWithFormat("H:|[v0]|", views: weatherListTableView)
+            weatherListContainerView.addConstraintsWithFormat("V:|[v0]|", views: weatherListTableView)
+        }
     }
     
 }
@@ -56,7 +93,8 @@ extension ForecastViewController {
 extension ForecastViewController: ForecastViewInjection {
     
     func loadWeatherInformationWithViewModels(_ viewModels: [ForecastViewModel]) {
-        print("TO DO")
+        datasource?.items = viewModels
+        weatherListTableView?.reloadData()
     }
     
 }
