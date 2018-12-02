@@ -19,10 +19,20 @@ class ForecastDatasource: NSObject {
 }
 
 // MARK: - UITableViewDataSource
-extension ForecastDatasource: UITableViewDataSource {
+extension ForecastDatasource: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        let dictionary = Dictionary(grouping: items, by: { $0.dt })
+        return dictionary.keys.count
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        let dictionary = Dictionary(grouping: items, by: { $0.dt })
+        let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
+        guard let elementsPerSection = dictionary[keysArray[section]] else {
+            return 0
+        }
+        return elementsPerSection.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,10 +41,29 @@ extension ForecastDatasource: UITableViewDataSource {
             
         }
 
-        let viewModel = items[indexPath.row]
-        cell.bindWithViewModel(viewModel)
+        let dictionary = Dictionary(grouping: items, by: { $0.dt })
+        let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
+        if let elementsPerSection = dictionary[keysArray[indexPath.section]]  {
+            let viewModel = elementsPerSection[indexPath.row]
+            cell.bindWithViewModel(viewModel)
+        }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = ForecastHeaderView()
+        let dictionary = Dictionary(grouping: items, by: { $0.dt })
+        let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
+        if let elementsPerSection = dictionary[keysArray[section]]  {
+            let viewModel = elementsPerSection[0]
+            headerView.title = viewModel.day.uppercased()
+        }
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return ForecastHeaderView.height
     }
     
 }

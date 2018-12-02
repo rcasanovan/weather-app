@@ -11,12 +11,16 @@ import Foundation
 public struct ForecastViewModel {
     
     public let dt: String
+    public let hour: String
+    public let day: String
     public let temp: String
     public let description: String
     public let icon: String?
     
-    init(dt: String, temp: String, description: String, icon: String?) {
+    init(dt: String, hour: String, day: String, temp: String, description: String, icon: String?) {
         self.dt = dt
+        self.hour = hour
+        self.day = day
         self.temp = temp
         self.description = description
         self.icon = icon
@@ -29,7 +33,11 @@ public struct ForecastViewModel {
     }
     
     public static func getViewModelWith(eachWeather: WeatherListResponse) -> ForecastViewModel {
-        let dt = Date.getHHmmFormatWithTimestamp(eachWeather.dt)
+        let dt = Date.getddMMYYYYFormatWithTimestamp(eachWeather.dt)
+        
+        let hour = Date.getHHmmFormatWithTimestamp(eachWeather.dt)
+        
+        let day = Date.getWeekDayWithTimestamp(eachWeather.dt)
         
         let temp = "\(Int(eachWeather.main.temp)) \(Device.getWeatherSymbol())"
         
@@ -43,7 +51,7 @@ public struct ForecastViewModel {
             icon = weather.icon
         }
         
-        return ForecastViewModel(dt: dt, temp: temp, description: description, icon: icon)
+        return ForecastViewModel(dt: dt, hour: hour, day: day, temp: temp, description: description, icon: icon)
     }
     
 }

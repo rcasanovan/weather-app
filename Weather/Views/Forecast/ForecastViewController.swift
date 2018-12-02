@@ -66,6 +66,7 @@ extension ForecastViewController {
         if let weatherListTableView = weatherListTableView {
             datasource = ForecastDatasource()
             weatherListTableView.dataSource = datasource
+            weatherListTableView.delegate = datasource
         }
     }
     

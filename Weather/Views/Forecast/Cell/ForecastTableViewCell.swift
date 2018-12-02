@@ -48,7 +48,7 @@ class ForecastTableViewCell: UITableViewCell {
             weatherIconImageView.image = UIImage(named: icon)
         }
         tempLabel.text = viewModel.temp
-        hourLabel.text = viewModel.dt
+        hourLabel.text = viewModel.hour
         descriptionLabel.text = viewModel.description
     }
 }
