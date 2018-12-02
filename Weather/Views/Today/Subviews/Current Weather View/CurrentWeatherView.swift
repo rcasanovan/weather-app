@@ -52,11 +52,11 @@ extension CurrentWeatherView {
     
     private func configureSubviews() {
         temperatureLabel.font = UIFont.proximaNovaBoldWithSize(size: 44.0)
-        temperatureLabel.textColor = .blue
+        temperatureLabel.textColor = UIColor.colorWithHex(hex: "4B92F7")
         temperatureLabel.textAlignment = .center
         
         weatherLabel.font = UIFont.proximaNovaBoldWithSize(size: 20.0)
-        weatherLabel.textColor = .blue
+        weatherLabel.textColor = UIColor.colorWithHex(hex: "4B92F7")
         weatherLabel.textAlignment = .center
     }
     
