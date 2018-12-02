@@ -29,7 +29,7 @@ public struct ForecastViewModel {
     }
     
     public static func getViewModelWith(eachWeather: WeatherListResponse) -> ForecastViewModel {
-        let dt = "13:00"
+        let dt = Date.getHHmmFormatWithTimestamp(eachWeather.dt)
         
         let temp = "\(Int(eachWeather.main.temp)) \(Device.getWeatherSymbol())"
         
@@ -42,8 +42,6 @@ public struct ForecastViewModel {
         if let weather = eachWeather.weather.first {
             icon = weather.icon
         }
-        
-        
         
         return ForecastViewModel(dt: dt, temp: temp, description: description, icon: icon)
     }

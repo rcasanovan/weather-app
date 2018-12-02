@@ -17,7 +17,7 @@ public struct WeatherResponse: Codable {
 }
 
 public struct WeatherListResponse: Codable {
-    let dt: Int64
+    let dt: Double
     let main: WeatherListMainResponse
     let weather: [WeatherListWeatherResponse]
     let clouds: WeatherListCloudsResponse
