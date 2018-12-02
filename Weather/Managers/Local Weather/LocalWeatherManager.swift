@@ -73,21 +73,26 @@ class LocalWeatherManager {
 //        return suggestions.count == 1
 //    }
     
-    public static func archive(w: WeatherResponse) -> Data {
-        var fw = w
-        return Data(bytes: &fw, count: MemoryLayout<WeatherResponse>.stride)
+}
+
+extension LocalWeatherManager {
+    
+    private static func archive(w: WeatherResponse) -> Data? {
+        do {
+            let jsonData = try JSONEncoder().encode(w)
+            return jsonData
+        } catch { print(error) }
+        
+        return nil
     }
     
-    static func unarchive(d: Data) -> WeatherResponse {
-        guard d.count == MemoryLayout<WeatherResponse>.stride else {
-            fatalError("Error!")
-        }
+    private static func unarchive(d: Data) -> WeatherResponse? {
+        do {
+            let decodedWeather = try JSONDecoder().decode(WeatherResponse.self, from: d)
+            return decodedWeather
+        } catch { print(error) }
         
-        var w: WeatherResponse?
-        d.withUnsafeBytes({(bytes: UnsafePointer<WeatherResponse>) -> Void in
-            w = UnsafePointer<WeatherResponse>(bytes).pointee
-        })
-        return w!
+        return nil
     }
     
 }

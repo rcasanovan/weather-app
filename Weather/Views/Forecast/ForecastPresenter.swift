@@ -24,10 +24,10 @@ class ForecastPresenter {
 extension ForecastPresenter {
     
     private func getLocalWeatherInformation() {
-        guard let viewModel = interactor.getWeatherInformation() else {
+        guard let viewModels = interactor.getWeatherInformation() else {
             return
         }
-        view?.loadWeatherInformationWithViewModel(viewModel)
+        view?.loadWeatherInformationWithViewModels(viewModels)
     }
     
 }

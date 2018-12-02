@@ -13,11 +13,11 @@ class ForecastInteractor {
 
 extension ForecastInteractor: ForecastInteractorDelegate {
     
-    func getWeatherInformation() -> TodayViewModel? {
+    func getWeatherInformation() -> [ForecastViewModel]? {
         guard let weatherResponse = LocalWeatherManager.getLocalWeather() else {
             return nil
         }
-        return TodayViewModel.getViewModelWith(weatherResponse: weatherResponse)
+        return ForecastViewModel.getViewModelsWith(weatherResponse: weatherResponse)
     }
     
 }

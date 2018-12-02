@@ -10,7 +10,7 @@ import Foundation
 
 // View / Presenter
 protocol ForecastViewInjection : class {
-    func loadWeatherInformationWithViewModel(_ viewModel: TodayViewModel)
+    func loadWeatherInformationWithViewModels(_ viewModels: [ForecastViewModel])
 }
 
 protocol ForecastPresenterDelegate : class {
@@ -19,7 +19,7 @@ protocol ForecastPresenterDelegate : class {
 
 // Presenter / Interactor
 protocol ForecastInteractorDelegate : class {
-    func getWeatherInformation() -> TodayViewModel?
+    func getWeatherInformation() -> [ForecastViewModel]?
 }
 
 // Presenter / Router

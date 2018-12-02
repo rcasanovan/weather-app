@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct WeatherResponse: Decodable {
+public struct WeatherResponse: Codable {
     let cod: String
     let message: CGFloat
     let cnt: UInt
@@ -16,7 +16,7 @@ public struct WeatherResponse: Decodable {
     let city: WeatherCityResponse
 }
 
-public struct WeatherListResponse: Decodable {
+public struct WeatherListResponse: Codable {
     let dt: Int64
     let main: WeatherListMainResponse
     let weather: [WeatherListWeatherResponse]
@@ -25,7 +25,7 @@ public struct WeatherListResponse: Decodable {
     let dt_txt: String
 }
 
-public struct WeatherListMainResponse: Decodable {
+public struct WeatherListMainResponse: Codable {
     let temp: CGFloat
     let temp_min: CGFloat
     let temp_max: CGFloat
@@ -36,23 +36,23 @@ public struct WeatherListMainResponse: Decodable {
     let temp_kf: CGFloat
 }
 
-public struct WeatherListWeatherResponse: Decodable {
+public struct WeatherListWeatherResponse: Codable {
     let id: Int
     let main: String
     let description: String
     let icon: String
 }
 
-public struct WeatherListCloudsResponse: Decodable {
+public struct WeatherListCloudsResponse: Codable {
     let all: Int
 }
 
-public struct WeatherListWindResponse: Decodable {
+public struct WeatherListWindResponse: Codable {
     let speed: CGFloat
     let deg: CGFloat
 }
 
-public struct WeatherCityResponse: Decodable {
+public struct WeatherCityResponse: Codable {
     let id: Int64
     let name: String
     let coord: WeatherCityCoordResponse
@@ -60,7 +60,7 @@ public struct WeatherCityResponse: Decodable {
     let population: Int64?
 }
 
-public struct WeatherCityCoordResponse: Decodable {
+public struct WeatherCityCoordResponse: Codable {
     let lat: CGFloat
     let lon: CGFloat
 }
