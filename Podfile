@@ -18,6 +18,9 @@ def weatherPods
     
     #Networking
     pod 'ReachabilitySwift', '~> 4.2.1'
+    
+    #Firebase
+    pod 'Firebase/Core'
 end
 
 target 'Weather' do
