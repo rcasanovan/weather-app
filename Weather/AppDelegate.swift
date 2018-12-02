@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureNavigationBar()
         showInitialView()
+        addObservers()
         return true
     }
 
@@ -60,6 +61,47 @@ extension AppDelegate  {
     private func configureNavigationBar() {
         UINavigationBar.appearance().barStyle = .default
         UINavigationBar.appearance().barTintColor = .white
+    }
+    
+    /**
+     * Add observers
+     */
+    private func addObservers() {
+        ReachabilityManager.shared.reachability?.whenReachable = { reachability in
+            self.showReachabilityMessage(false)
+        }
+        
+        ReachabilityManager.shared.reachability?.whenUnreachable = { reachability in
+            if !LocalWeatherManager.localWeatherExists() {
+                self.showReachabilityMessage(true)
+            }
+        }
+    }
+    
+    /**
+     * Show reachability message
+     *
+     * - parameters:
+     *      -show: show / hide reachability message
+     */
+    private func showReachabilityMessage(_ show: Bool) {
+        guard let rootViewController = UIApplication.shared.windows[0].rootViewController else {
+            return
+        }
+        
+        if show, let _ = rootViewController.presentedViewController as? GeneralMessageViewController {
+            return
+        }
+        
+        if show {
+            let generalMessageViewController = GeneralMessageViewController()
+            generalMessageViewController.modalTransitionStyle = .coverVertical
+            generalMessageViewController.modalPresentationStyle = .overCurrentContext
+            generalMessageViewController.presenter = GeneralMessagePresenter(view: generalMessageViewController, type: .NoInternetConnection)
+            rootViewController.present(generalMessageViewController, animated: true, completion: nil)
+        } else {
+            rootViewController.dismiss(animated: true, completion: nil)
+        }
     }
 
 }
