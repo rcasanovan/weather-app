@@ -9,7 +9,7 @@ This project is using cocoapods but a gitignore file is there so the third-party
 If you have any doubt about cocoapods you can check the reference [here](https://cocoapods.org).
 
 ## Project Architecture 
-![alt tag](https://github.com/rcasanovan/iMovies/blob/master/Images/projectArchitecture.jpeg?raw=true)
+![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/projectArchitecture.jpeg?raw=true)
 
 References:
 * [Viper architecture](https://www.objc.io/issues/13-architecture/viper/)
