@@ -55,4 +55,8 @@ extension ForecastViewController {
 
 extension ForecastViewController: ForecastViewInjection {
     
+    func loadWeatherInformationWithViewModel(_ viewModel: TodayViewModel) {
+        print("TO DO")
+    }
+    
 }

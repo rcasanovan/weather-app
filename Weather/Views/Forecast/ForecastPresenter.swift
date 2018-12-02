@@ -23,20 +23,19 @@ class ForecastPresenter {
 
 extension ForecastPresenter {
     
-    private func registerInternalNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(weatherInfoLoaded), name: .weatherInfoLoaded, object: nil)
+    private func getLocalWeatherInformation() {
+        guard let viewModel = interactor.getWeatherInformation() else {
+            return
+        }
+        view?.loadWeatherInformationWithViewModel(viewModel)
     }
     
-    @objc private func weatherInfoLoaded() {
-        print("TO DO")
-    }
-
 }
 
 extension ForecastPresenter: ForecastPresenterDelegate {
     
     func viewDidLoad() {
-        registerInternalNotifications()
+        getLocalWeatherInformation()
     }
     
 }
