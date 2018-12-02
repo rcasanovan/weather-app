@@ -13,9 +13,9 @@ public struct ForecastViewModel {
     public let dt: String
     public let temp: String
     public let description: String
-    public let icon: String
+    public let icon: String?
     
-    init(dt: String, temp: String, description: String, icon: String) {
+    init(dt: String, temp: String, description: String, icon: String?) {
         self.dt = dt
         self.temp = temp
         self.description = description
@@ -31,11 +31,19 @@ public struct ForecastViewModel {
     public static func getViewModelWith(eachWeather: WeatherListResponse) -> ForecastViewModel {
         let dt = "13:00"
         
-        let temp = "22 \(Device.getWeatherSymbol())"
+        let temp = "\(Int(eachWeather.main.temp)) \(Device.getWeatherSymbol())"
         
-        let description = "Clear"
+        var description: String = "-"
+        if let weather = eachWeather.weather.first {
+            description = weather.description
+        }
         
-        let icon = "01d"
+        var icon: String?
+        if let weather = eachWeather.weather.first {
+            icon = weather.icon
+        }
+        
+        
         
         return ForecastViewModel(dt: dt, temp: temp, description: description, icon: icon)
     }

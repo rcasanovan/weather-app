@@ -31,6 +31,10 @@ class ForecastTableViewCell: UITableViewCell {
     
     public override func prepareForReuse() {
         super.prepareForReuse()
+        weatherIconImageView.image = nil
+        hourLabel.text = ""
+        descriptionLabel.text = ""
+        tempLabel.text = ""
     }
     
     /**
@@ -40,7 +44,9 @@ class ForecastTableViewCell: UITableViewCell {
      *      -viewModel: ForecastViewModel
      */
     public func bindWithViewModel(_ viewModel: ForecastViewModel) {
-        weatherIconImageView.image = UIImage(named: viewModel.icon)
+        if let icon = viewModel.icon {
+            weatherIconImageView.image = UIImage(named: icon)
+        }
         tempLabel.text = viewModel.temp
         hourLabel.text = viewModel.dt
         descriptionLabel.text = viewModel.description
@@ -55,6 +61,7 @@ extension ForecastTableViewCell {
      */
     private func setupViews() {
         backgroundColor = .clear
+        separatorInset = UIEdgeInsets(top: 0.0, left: 90.0, bottom: 0.0, right: 0.0)
         
         configureSubviews()
         addSubviews()
