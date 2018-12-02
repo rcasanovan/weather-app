@@ -8,7 +8,12 @@
 
 import Foundation
 
+public struct WeatherInfo {
+    static let viewModelValue: String = "viewModelValue"
+}
+
 extension Notification.Name {
     static let locationAllowed = Notification.Name("locationAllowed")
     static let locationDenied = Notification.Name("locationDenied")
+    static let weatherInfoLoaded = Notification.Name("weatherInfoLoaded")
 }
