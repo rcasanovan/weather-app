@@ -24,6 +24,8 @@ typealias getWeatherInteractorCompletionBlock = (_ viewModel: TodayViewModel?, _
 protocol TodayInteractorDelegate : class {
     func requestLocationAuthorizationIfNeeded()
     func getCurrentWeather(completion: @escaping getWeatherInteractorCompletionBlock)
+    func getLocalWeatherInformation() -> TodayViewModel?
+    func shouldGetLocalWeatherInformation() -> Bool
 }
 
 // Presenter / Router

@@ -57,4 +57,15 @@ extension TodayInteractor: TodayInteractorDelegate {
         }
     }
     
+    func getLocalWeatherInformation() -> TodayViewModel? {
+        guard let weatherResponse = LocalWeatherManager.getLocalWeather() else {
+            return nil
+        }
+        return TodayViewModel.getViewModelWith(weatherResponse: weatherResponse)
+    }
+    
+    func shouldGetLocalWeatherInformation() -> Bool {
+        return LocalWeatherManager.localWeatherExists()
+    }
+    
 }

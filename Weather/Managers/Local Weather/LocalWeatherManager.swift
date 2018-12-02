@@ -35,7 +35,7 @@ class LocalWeatherManager {
     }
     
     /**
-     * Get all suggestions
+     * Get local weather data
      */
     public static func getLocalWeather() -> WeatherResponse? {
         // Get the default Realm
@@ -50,7 +50,7 @@ class LocalWeatherManager {
     }
     
     /**
-     * Delete all local weather
+     * Delete all local weather data
      */
     public static func deleteLocalWeather() {
         let realm = try! Realm()
@@ -63,15 +63,14 @@ class LocalWeatherManager {
     
     /**
      * Validate if suggestion exists in the database
-     *
-     * - parameters:
-     *      -suggestion: suggestion to check
      */
-//    public static func suggestionExists(_ suggestion: String) -> Bool {
-//        let realm = try! Realm()
-//        let suggestions = realm.objects(IMSearchSuggestion.self).filter("suggestion == %@", suggestion.lowercased())
-//        return suggestions.count == 1
-//    }
+    public static func localWeatherExists() -> Bool {
+        let realm = try! Realm()
+        guard let localWeather = realm.objects(LocalWeather.self).first, let weatherData = localWeather.weatherData else {
+            return false
+        }
+        return true
+    }
     
 }
 

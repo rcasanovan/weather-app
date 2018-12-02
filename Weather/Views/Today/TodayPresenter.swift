@@ -51,11 +51,22 @@ extension TodayPresenter {
         }
     }
     
+    private func validateLocalData() {
+        if !interactor.shouldGetLocalWeatherInformation() { return }
+        
+        guard let viewModel = interactor.getLocalWeatherInformation() else {
+            return
+        }
+        
+        view?.loadWeatherInformationWithViewModel(viewModel)
+    }
+    
 }
 
 extension TodayPresenter: TodayPresenterDelegate {
     
     func viewDidLoad() {
+        validateLocalData()
         registerInternalNotifications()
         interactor.requestLocationAuthorizationIfNeeded()
     }
