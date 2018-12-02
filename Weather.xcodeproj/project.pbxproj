@@ -61,6 +61,7 @@
 		C8926E1621B3FBAE00CF19C4 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E1521B3FBAE00CF19C4 /* ForecastTableViewCell.swift */; };
 		C8926E1921B4064400CF19C4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E1821B4064400CF19C4 /* Date.swift */; };
 		C8926E1C21B412D600CF19C4 /* ForecastHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E1B21B412D600CF19C4 /* ForecastHeaderView.swift */; };
+		C8926E1F21B423E700CF19C4 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E1E21B423E700CF19C4 /* ReachabilityManager.swift */; };
 		FD0CAFF5B60C1750404E1533 /* Pods_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F78B60E204CDD6636819C5 /* Pods_WeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		C8926E1521B3FBAE00CF19C4 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		C8926E1821B4064400CF19C4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C8926E1B21B412D600CF19C4 /* ForecastHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastHeaderView.swift; sourceTree = "<group>"; };
+		C8926E1E21B423E700CF19C4 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -503,6 +505,7 @@
 		C8926E0821B3DA0100CF19C4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C8926E1D21B423CF00CF19C4 /* Reachability */,
 				C8926E0921B3DA1300CF19C4 /* Local Weather */,
 			);
 			path = Managers;
@@ -555,6 +558,14 @@
 				C8926E1B21B412D600CF19C4 /* ForecastHeaderView.swift */,
 			);
 			path = "Header View";
+			sourceTree = "<group>";
+		};
+		C8926E1D21B423CF00CF19C4 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C8926E1E21B423E700CF19C4 /* ReachabilityManager.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -778,6 +789,7 @@
 				C8926DC521B2CB7800CF19C4 /* CustomTitleView.swift in Sources */,
 				C8926DA621B2A9CA00CF19C4 /* Result.swift in Sources */,
 				C8926E1921B4064400CF19C4 /* Date.swift in Sources */,
+				C8926E1F21B423E700CF19C4 /* ReachabilityManager.swift in Sources */,
 				C8926DF621B30EB900CF19C4 /* TodayViewModel.swift in Sources */,
 				C8926DA421B2A9CA00CF19C4 /* HTTPCode.swift in Sources */,
 				C8926DAA21B2A9CA00CF19C4 /* EndPoint.swift in Sources */,

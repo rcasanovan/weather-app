@@ -66,7 +66,7 @@ class LocalWeatherManager {
      */
     public static func localWeatherExists() -> Bool {
         let realm = try! Realm()
-        guard let localWeather = realm.objects(LocalWeather.self).first, let weatherData = localWeather.weatherData else {
+        guard let localWeather = realm.objects(LocalWeather.self).first, let _ = localWeather.weatherData else {
             return false
         }
         return true
