@@ -22,7 +22,16 @@ public struct WeatherListResponse: Codable {
     let weather: [WeatherListWeatherResponse]
     let clouds: WeatherListCloudsResponse
     let wind: WeatherListWindResponse
+    let rain: WeatherRainResponse?
     let dt_txt: String
+}
+
+public struct WeatherRainResponse: Codable {
+    let rain3h: CGFloat?
+    
+    enum CodingKeys: String, CodingKey {
+        case rain3h = "3h"
+    }
 }
 
 public struct WeatherListMainResponse: Codable {

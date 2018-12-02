@@ -62,7 +62,8 @@ class LocationManager: NSObject {
 extension LocationManager {
     
     private func simulatedLocation() -> CLLocation {
-        return CLLocation(latitude: 39.470242, longitude: -0.376800)
+        //return CLLocation(latitude: 39.470242, longitude: -0.376800)
+        return CLLocation(latitude: 50.075539, longitude: 14.437800)
     }
     
 }

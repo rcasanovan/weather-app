@@ -18,8 +18,9 @@ public struct TodayViewModel {
     public let pressure: String
     public let wind: String
     public let windDirection: String
+    public let rain: String
     
-    init(cityName: String, currentTemperature: String, currentWeatherIconName: String?, weatherDescription: String, humidity: String, pressure: String, wind: String, windDirection: String) {
+    init(cityName: String, currentTemperature: String, currentWeatherIconName: String?, weatherDescription: String, humidity: String, pressure: String, wind: String, windDirection: String, rain: String) {
         self.cityName = cityName
         self.currentTemperature = currentTemperature
         self.currentWeatherIconName = currentWeatherIconName
@@ -28,6 +29,7 @@ public struct TodayViewModel {
         self.pressure = pressure
         self.wind = wind
         self.windDirection = windDirection
+        self.rain = rain
     }
     
     public static func getViewModelWith(weatherResponse: WeatherResponse) -> TodayViewModel {
@@ -66,9 +68,9 @@ public struct TodayViewModel {
             let unitTemperature = Device.getCurrentUnitTemperature()
             switch unitTemperature {
             case .celsius:
-                wind = "\(currentTemperature.wind.speed * 3.6) km/h"
+                wind = "\(Int(currentTemperature.wind.speed * 3.6)) km/h"
             case .fahrenheit:
-                wind = "\(currentTemperature.wind.speed) mi/h"
+                wind = "\(Int(currentTemperature.wind.speed)) mi/h"
             default:
                 print("do nothing...")
             }
@@ -79,7 +81,12 @@ public struct TodayViewModel {
             windDirection = Device.degToCompass(currentTemperature.wind.deg)
         }
         
-        return TodayViewModel(cityName: cityName, currentTemperature: currentTemperatureTitle, currentWeatherIconName: currentWeatherIconName, weatherDescription: weatherDescription, humidity: humidity, pressure: pressure, wind: wind, windDirection: windDirection)
+        var rain: String = "-"
+        if let currentTemperature = weatherResponse.list.first, let currentRain = currentTemperature.rain, let rain3h = currentRain.rain3h {
+            rain = "\(rain3h) mm"
+        }
+        
+        return TodayViewModel(cityName: cityName, currentTemperature: currentTemperatureTitle, currentWeatherIconName: currentWeatherIconName, weatherDescription: weatherDescription, humidity: humidity, pressure: pressure, wind: wind, windDirection: windDirection, rain: rain)
     }
     
 }

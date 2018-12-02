@@ -41,7 +41,11 @@ extension CurrentWeatherInformationDatasource: UICollectionViewDataSource {
             }
             cell.bindWith(image: UIImage(named: "HumidityIcon"), description: humidity)
         case 1:
-            cell.bindWith(image: UIImage(named: "PrecipitationIcon"), description: "1.0 mm")
+            var rain: String = "-"
+            if let viewModel = viewModel {
+                rain = viewModel.rain
+            }
+            cell.bindWith(image: UIImage(named: "PrecipitationIcon"), description: rain)
         case 2:
             var pressure: String = "-"
             if let viewModel = viewModel {

@@ -27,8 +27,6 @@ public struct ForecastViewModel {
     }
     
     public static func getViewModelsWith(weatherResponse: WeatherResponse) -> [ForecastViewModel] {
-        print(weatherResponse)
-        print(weatherResponse.list)
         return weatherResponse.list.map { getViewModelWith(eachWeather: $0) }
     }
     
