@@ -15,6 +15,7 @@ class ForecastViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        presenter?.viewDidLoad()
     }
     
 }

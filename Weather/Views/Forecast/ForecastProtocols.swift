@@ -13,6 +13,7 @@ protocol ForecastViewInjection : class {
 }
 
 protocol ForecastPresenterDelegate : class {
+    func viewDidLoad()
 }
 
 // Presenter / Interactor

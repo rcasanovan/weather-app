@@ -1,20 +1,30 @@
 PODS:
   - CollectionViewCenteredFlowLayout (1.0.1)
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - CollectionViewCenteredFlowLayout (~> 1.0.1)
+  - RealmSwift (~> 3.7.6)
   - SVProgressHUD (~> 2.2.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CollectionViewCenteredFlowLayout
+    - Realm
+    - RealmSwift
     - SVProgressHUD
 
 SPEC CHECKSUMS:
   CollectionViewCenteredFlowLayout: 339b935be4d8578c59e448c8906117a07c657d85
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 7f50953577ac013eff61e8bc4ea6b6c517449e73
+PODFILE CHECKSUM: 7762c041e871fc455b5547398699aebf7011cc77
 
 COCOAPODS: 1.5.3

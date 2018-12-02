@@ -21,6 +21,22 @@ class ForecastPresenter {
     
 }
 
+extension ForecastPresenter {
+    
+    private func registerInternalNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(weatherInfoLoaded), name: .weatherInfoLoaded, object: nil)
+    }
+    
+    @objc private func weatherInfoLoaded() {
+        print("TO DO")
+    }
+
+}
+
 extension ForecastPresenter: ForecastPresenterDelegate {
+    
+    func viewDidLoad() {
+        registerInternalNotifications()
+    }
     
 }
