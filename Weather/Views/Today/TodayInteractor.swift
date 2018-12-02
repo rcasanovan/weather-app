@@ -46,6 +46,7 @@ extension TodayInteractor: TodayInteractorDelegate {
                     completion(nil, false, nil)
                     return
                 }
+                LocalWeatherManager.saveLocalWeather(weather)
                 let viewModel = TodayViewModel.getViewModelWith(weatherResponse: weather)
                 completion(viewModel, true, nil)
                 break

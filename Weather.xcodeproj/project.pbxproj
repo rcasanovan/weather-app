@@ -54,6 +54,8 @@
 		C8926E0321B3D4E900CF19C4 /* ForecastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E0221B3D4E900CF19C4 /* ForecastPresenter.swift */; };
 		C8926E0521B3D4F900CF19C4 /* ForecastInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E0421B3D4F900CF19C4 /* ForecastInteractor.swift */; };
 		C8926E0721B3D50500CF19C4 /* ForecastRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E0621B3D50500CF19C4 /* ForecastRouter.swift */; };
+		C8926E0C21B3DA3200CF19C4 /* LocalWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E0B21B3DA3100CF19C4 /* LocalWeatherManager.swift */; };
+		C8926E0E21B3DA6100CF19C4 /* LocalWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E0D21B3DA6100CF19C4 /* LocalWeather.swift */; };
 		FD0CAFF5B60C1750404E1533 /* Pods_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F78B60E204CDD6636819C5 /* Pods_WeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,8 @@
 		C8926E0221B3D4E900CF19C4 /* ForecastPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastPresenter.swift; sourceTree = "<group>"; };
 		C8926E0421B3D4F900CF19C4 /* ForecastInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastInteractor.swift; sourceTree = "<group>"; };
 		C8926E0621B3D50500CF19C4 /* ForecastRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRouter.swift; sourceTree = "<group>"; };
+		C8926E0B21B3DA3100CF19C4 /* LocalWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeatherManager.swift; sourceTree = "<group>"; };
+		C8926E0D21B3DA6100CF19C4 /* LocalWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeather.swift; sourceTree = "<group>"; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				C82B346821B2A90E00532842 /* AppDelegate.swift */,
+				C8926E0821B3DA0100CF19C4 /* Managers */,
 				C8926DCF21B2CFEC00CF19C4 /* Extensions */,
 				C8926DB021B2BA3C00CF19C4 /* Utils */,
 				C8926DBE21B2C69800CF19C4 /* Views */,
@@ -480,6 +485,31 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		C8926E0821B3DA0100CF19C4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C8926E0921B3DA1300CF19C4 /* Local Weather */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C8926E0921B3DA1300CF19C4 /* Local Weather */ = {
+			isa = PBXGroup;
+			children = (
+				C8926E0A21B3DA1E00CF19C4 /* Data Models */,
+				C8926E0B21B3DA3100CF19C4 /* LocalWeatherManager.swift */,
+			);
+			path = "Local Weather";
+			sourceTree = "<group>";
+		};
+		C8926E0A21B3DA1E00CF19C4 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8926E0D21B3DA6100CF19C4 /* LocalWeather.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -693,6 +723,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8926E0E21B3DA6100CF19C4 /* LocalWeather.swift in Sources */,
 				C8926DC521B2CB7800CF19C4 /* CustomTitleView.swift in Sources */,
 				C8926DA621B2A9CA00CF19C4 /* Result.swift in Sources */,
 				C8926DF621B30EB900CF19C4 /* TodayViewModel.swift in Sources */,
@@ -723,6 +754,7 @@
 				C8926DDF21B2E15900CF19C4 /* TodayInteractor.swift in Sources */,
 				C8926DA821B2A9CA00CF19C4 /* ResultError.swift in Sources */,
 				C8926DB521B2BB0A00CF19C4 /* InternalNotifications.swift in Sources */,
+				C8926E0C21B3DA3200CF19C4 /* LocalWeatherManager.swift in Sources */,
 				C8926E0521B3D4F900CF19C4 /* ForecastInteractor.swift in Sources */,
 				C8926E0121B3D4D200CF19C4 /* ForecastProtocols.swift in Sources */,
 				C8926DC821B2CBC300CF19C4 /* BaseViewController.swift in Sources */,
