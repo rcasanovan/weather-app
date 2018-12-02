@@ -304,7 +304,6 @@
 		C8926DB021B2BA3C00CF19C4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C8926DB121B2BA5200CF19C4 /* Location Manager */,
 				C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */,
 				C8926DE621B2F57C00CF19C4 /* Device.swift */,
 			);
@@ -523,6 +522,7 @@
 		C8926E0821B3DA0100CF19C4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C8926DB121B2BA5200CF19C4 /* Location Manager */,
 				C8926E1D21B423CF00CF19C4 /* Reachability */,
 				C8926E0921B3DA1300CF19C4 /* Local Weather */,
 			);
