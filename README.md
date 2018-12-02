@@ -220,6 +220,22 @@ I think using managers is a good idea but be careful!. Please don't create manag
 
 I'm using only 4 here:
 
+#### RemoteDabaBaseManager
+
+Used to store information remotely (Firebase)
+
+#### LocationManager
+
+Used to manage all the location stuff (request auth, get the current location)
+
+#### ReachabilityManager
+
+Used to manage the reachability
+
+#### LocalWeatherManager
+
+Used to store the last weather information locally (Realm)
+
 ## How it looks like?
 
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/01.png?raw=true)
