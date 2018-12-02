@@ -222,6 +222,9 @@ I'm using only 4 here:
 
 ## How it looks like?
 
+![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/01.png?raw=true)
+![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/02.png?raw=true)
+
 ## What's left in the demo?
 
 
