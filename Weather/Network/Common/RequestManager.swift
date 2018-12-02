@@ -28,8 +28,7 @@ class RequestManager {
     }
     
     var isConnected: Bool {
-        //__ THIS IS TEMPORAL
-        return true
+        return ReachabilityManager.shared.reachability?.connection != .none
     }
     
     func send<T: RequestProtocol>(request: T, after: TimeInterval) {
