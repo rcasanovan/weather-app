@@ -18,7 +18,6 @@ protocol TodayPresenterDelegate : class {
 }
 
 // Presenter / Interactor
-
 typealias getWeatherInteractorCompletionBlock = (_ viewModel: TodayViewModel?, _ success: Bool, _ error: ResultError?) -> Void
 
 protocol TodayInteractorDelegate : class {
@@ -26,8 +25,4 @@ protocol TodayInteractorDelegate : class {
     func getCurrentWeather(completion: @escaping getWeatherInteractorCompletionBlock)
     func getLocalWeatherInformation() -> TodayViewModel?
     func shouldGetLocalWeatherInformation() -> Bool
-}
-
-// Presenter / Router
-protocol TodayRouterDelegate : class {
 }

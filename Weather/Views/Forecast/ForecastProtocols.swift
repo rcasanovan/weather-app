@@ -21,7 +21,3 @@ protocol ForecastPresenterDelegate : class {
 protocol ForecastInteractorDelegate : class {
     func getWeatherInformation() -> [ForecastViewModel]?
 }
-
-// Presenter / Router
-protocol ForecastRouterDelegate : class {
-}
