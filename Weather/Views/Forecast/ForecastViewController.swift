@@ -43,7 +43,7 @@ extension ForecastViewController {
     private func configureNavigationBar() {
         let customTitleView = CustomTitleView()
         customTitleView.titleColor = .black
-        customTitleView.setTitle("Forecast")
+        customTitleView.setTitle(NSLocalizedString("forecast.title", comment: ""))
         navigationItem.titleView = customTitleView
         
         weatherListTableView = UITableView(frame: weatherListContainerView.bounds, style: .plain)

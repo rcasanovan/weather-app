@@ -34,11 +34,11 @@ extension MainTabBar {
         let todaySelectedIcon = UIImage(named: "TodaySelectedIcon")?.withRenderingMode(.alwaysOriginal)
         let forecastSelectedIcon = UIImage(named: "ForecastSelectedIcon")?.withRenderingMode(.alwaysOriginal)
         
-        let todayTabBarItem = UITabBarItem(title: "Today", image: todayIcon, tag: 0)
+        let todayTabBarItem = UITabBarItem(title: NSLocalizedString("today.title", comment: ""), image: todayIcon, tag: 0)
         todayViewController.tabBarItem = todayTabBarItem
         todayViewController.tabBarItem.selectedImage = todaySelectedIcon
         
-        let forecastTabBarItem = UITabBarItem(title: "Forecast", image: forecastIcon, tag: 1)
+        let forecastTabBarItem = UITabBarItem(title: NSLocalizedString("forecast.title", comment: ""), image: forecastIcon, tag: 1)
         forecastViewController.tabBarItem = forecastTabBarItem
         forecastViewController.tabBarItem.selectedImage = forecastSelectedIcon
         

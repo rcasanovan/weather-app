@@ -31,7 +31,10 @@ public struct TodayViewModel {
     }
     
     public static func getViewModelWith(weatherResponse: WeatherResponse) -> TodayViewModel {
-        let cityName = "\(weatherResponse.city.name), \(weatherResponse.city.country)"
+        var cityName = "\(weatherResponse.city.name)"
+        if let countryName = Device.countryName(countryCode: weatherResponse.city.country) {
+            cityName = "\(weatherResponse.city.name), \(countryName)"
+        }
         
         var currentTemperatureTitle: String = "-"
         if let currentTemperature = weatherResponse.list.first {

@@ -17,6 +17,12 @@ class Device {
         return languageCode
     }
     
+    public static func countryName(countryCode: String) -> String? {
+        let current = NSLocale.current
+        return current.localizedString(forRegionCode: countryCode)
+    }
+
+    
     public static func getCurrentUnitTemperature() -> UnitTemperature {
         return UnitTemperature.current
     }

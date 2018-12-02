@@ -52,7 +52,7 @@ extension TodayViewController {
     private func configureNavigationBar() {
         let customTitleView = CustomTitleView()
         customTitleView.titleColor = .black
-        customTitleView.setTitle("Today")
+        customTitleView.setTitle(NSLocalizedString("today.title", comment: ""))
         navigationItem.titleView = customTitleView
     }
     
