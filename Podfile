@@ -21,6 +21,7 @@ def weatherPods
     
     #Firebase
     pod 'Firebase/Core'
+    pod 'Firebase/Firestore'
 end
 
 target 'Weather' do

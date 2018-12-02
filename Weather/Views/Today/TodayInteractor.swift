@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class TodayInteractor {
     
@@ -23,6 +24,13 @@ extension TodayInteractor {
         requestManager.send(request: getWeatherRequest)
     }
     
+    private func addInformationWithWeatherResponse(_ weatherResponse: WeatherResponse, location: CLLocationCoordinate2D) {
+        guard let weather = weatherResponse.list.first else {
+            return
+        }
+        RemoteDabaBaseManager.addInformation(userId: "12345", lastTemperature: weather.main.temp, latitude: location.latitude, longitude: location.longitude, countryCode: weatherResponse.city.country)
+    }
+    
 }
 
 extension TodayInteractor: TodayInteractorDelegate {
@@ -32,20 +40,21 @@ extension TodayInteractor: TodayInteractorDelegate {
     }
     
     func getCurrentWeather(completion: @escaping getWeatherInteractorCompletionBlock) {
-        LocationManager.sharedInstance.simulateLocation = true
         guard let currenLocation = LocationManager.sharedInstance.getCurrentLocation() else {
             completion(nil, false, nil)
             return
         }
         let latitude = CGFloat(currenLocation.latitude)
         let longitude = CGFloat(currenLocation.longitude)
-        getWeatherWith(latitude: latitude, longitude: longitude) { (response) in
+        getWeatherWith(latitude: latitude, longitude: longitude) { [weak self] (response) in
+            guard let `self` = self else { return }
             switch response {
             case .success(let weather):
                 guard let weather = weather else {
                     completion(nil, false, nil)
                     return
                 }
+                self.addInformationWithWeatherResponse(weather, location: currenLocation)
                 LocalWeatherManager.saveLocalWeather(weather)
                 let viewModel = TodayViewModel.getViewModelWith(weatherResponse: weather)
                 completion(viewModel, true, nil)
