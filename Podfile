@@ -15,6 +15,9 @@ def weatherPods
     
     #Realm (data base)
     pod 'RealmSwift', '~> 3.7.6'
+    
+    #Networking
+    pod 'ReachabilitySwift', '~> 4.2.1'
 end
 
 target 'Weather' do
