@@ -35,7 +35,7 @@ class WeatherTitleView: UIView {
 extension WeatherTitleView {
     
     public var height: CGFloat {
-        return 20.0
+        return Layout.height
     }
     
     private func setupViews() {
@@ -58,16 +58,28 @@ extension WeatherTitleView {
 extension WeatherTitleView {
     
     private struct Layout {
+        
+        static let height: CGFloat = 20.0
+        
+        struct LocationArrowImageView {
+            static let width: CGFloat = 12.0
+            static let height: CGFloat = 12.0
+            static let top: CGFloat = 4.0
+        }
+        
+        struct CityLabel {
+            static let leading: CGFloat = 10.0
+        }
     }
     
     private func addSubviews() {
         addSubview(locationArrowImageView)
         addSubview(cityLabel)
         
-        addConstraintsWithFormat("H:|[v0(12.0)]", views: locationArrowImageView)
-        addConstraintsWithFormat("V:|-4.0-[v0(12.0)]", views: locationArrowImageView)
+        addConstraintsWithFormat("H:|[v0(\(Layout.LocationArrowImageView.width))]", views: locationArrowImageView)
+        addConstraintsWithFormat("V:|-\(Layout.LocationArrowImageView.top)-[v0(\(Layout.LocationArrowImageView.height))]", views: locationArrowImageView)
         
-        addConstraintsWithFormat("H:[v0]-10.0-[v1]|", views: locationArrowImageView, cityLabel)
+        addConstraintsWithFormat("H:[v0]-\(Layout.CityLabel.leading)-[v1]|", views: locationArrowImageView, cityLabel)
         addConstraintsWithFormat("V:|[v0]|", views: cityLabel)
     }
     
