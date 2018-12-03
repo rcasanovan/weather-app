@@ -136,6 +136,10 @@ public struct WeatherListResponse: Codable {
 public struct WeatherRainResponse: Codable {
     let rain3h: CGFloat?
     
+    //__ This is little trick.
+    //__ The "rain" field has another field inside called "3h"
+    //__ The problem is we can't process this field using Swift
+    //__ so we need to create an enum like a "bridge" to process the field
     enum CodingKeys: String, CodingKey {
         case rain3h = "3h"
     }
