@@ -214,7 +214,7 @@ Reference: [Realm](https://realm.io/docs/swift/latest)
 
 I think using managers is a good idea but be careful!. Please don't create managers as if the world were going to end tomorrow.
 
-I'm using only 4 here:
+I'm using only 5 here:
 
 ### RemoteDabaBaseManager
 
@@ -231,6 +231,10 @@ Used to manage the reachability
 ### LocalWeatherManager
 
 Used to store the last weather information locally (Realm)
+
+### ShareManager
+
+User to share the current weather using UIActivityViewController
 
 ## How it looks like?
 
