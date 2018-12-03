@@ -11,6 +11,7 @@ import Foundation
 class ForecastInteractor {
 }
 
+// MARK: - ForecastInteractorDelegate
 extension ForecastInteractor: ForecastInteractorDelegate {
     
     func getWeatherInformation() -> [ForecastViewModel]? {

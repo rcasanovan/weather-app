@@ -21,6 +21,7 @@ class ForecastPresenter {
     
 }
 
+// MARK: - Private section
 extension ForecastPresenter {
     
     private func getLocalWeatherInformation() {
@@ -32,6 +33,7 @@ extension ForecastPresenter {
     
 }
 
+// MARK: - ForecastPresenterDelegate
 extension ForecastPresenter: ForecastPresenterDelegate {
     
     func viewDidDidAppear() {

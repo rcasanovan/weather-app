@@ -12,6 +12,13 @@ class ForecastDatasource: NSObject {
     
     public var items: [ForecastViewModel] {
         didSet {
+            //__ This is a little trick.
+            //__ I create a dicctionary with keys = $0.dt
+            //__ and then I created a sorted keys array.
+            //__ This is to build the sections and add a headerview
+            //__ with the day string.
+            //__ Why am I doing this here?
+            //__ easy -> to do this logic once :)
             dictionary = Dictionary(grouping: items, by: { $0.dt })
             keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
         }

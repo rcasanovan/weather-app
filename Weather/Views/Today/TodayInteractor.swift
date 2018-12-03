@@ -16,6 +16,7 @@ class TodayInteractor {
     
 }
 
+// MARK: - Private section
 extension TodayInteractor {
     
     private func getWeatherWith(latitude: CGFloat, longitude: CGFloat, completion: @escaping getWeatherCompletionBlock) {
@@ -42,6 +43,7 @@ extension TodayInteractor {
     
 }
 
+// MARK: - TodayInteractorDelegate
 extension TodayInteractor: TodayInteractorDelegate {
     
     func requestLocationAuthorizationIfNeeded() {

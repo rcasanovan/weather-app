@@ -109,6 +109,7 @@ extension TodayViewController {
     
 }
 
+// MARK: - User actions
 extension TodayViewController {
     
     @objc private func shareButtonPressed() {
@@ -123,6 +124,7 @@ extension TodayViewController {
     
 }
 
+// MARK: - TodayViewInjection
 extension TodayViewController: TodayViewInjection {
     
     func loadWeatherInformationWithViewModel(_ viewModel: TodayViewModel) {

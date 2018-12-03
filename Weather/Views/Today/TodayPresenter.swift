@@ -23,6 +23,7 @@ class TodayPresenter {
     
 }
 
+// MARK: - Private section
 extension TodayPresenter {
     
     private func registerInternalNotifications() {
@@ -75,6 +76,7 @@ extension TodayPresenter {
     
 }
 
+// MARK: - TodayPresenterDelegate
 extension TodayPresenter: TodayPresenterDelegate {
     
     func viewDidLoad() {

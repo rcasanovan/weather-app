@@ -95,6 +95,7 @@ extension ForecastViewController {
     
 }
 
+// MARK: - ForecastViewInjection
 extension ForecastViewController: ForecastViewInjection {
     
     func loadWeatherInformationWithViewModels(_ viewModels: [ForecastViewModel]) {
