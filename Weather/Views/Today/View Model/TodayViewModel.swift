@@ -34,13 +34,13 @@ public struct TodayViewModel {
     
     public static func getViewModelWith(weatherResponse: WeatherResponse) -> TodayViewModel {
         var cityName = "\(weatherResponse.city.name)"
-        if let countryName = Device.countryName(countryCode: weatherResponse.city.country) {
+        if let countryName = Utils.countryName(countryCode: weatherResponse.city.country) {
             cityName = "\(weatherResponse.city.name), \(countryName)"
         }
         
         var currentTemperatureTitle: String = "-"
         if let currentTemperature = weatherResponse.list.first {
-            currentTemperatureTitle = "\(Int(currentTemperature.main.temp)) \(Device.getWeatherSymbol())"
+            currentTemperatureTitle = "\(Int(currentTemperature.main.temp)) \(Utils.getWeatherSymbol())"
         }
         
         var currentWeatherIconName: String?
@@ -65,7 +65,7 @@ public struct TodayViewModel {
         
         var wind: String = "-"
         if let currentTemperature = weatherResponse.list.first {
-            let unitTemperature = Device.getCurrentUnitTemperature()
+            let unitTemperature = Utils.getCurrentUnitTemperature()
             switch unitTemperature {
             case .celsius:
                 wind = "\(Int(currentTemperature.wind.speed * 3.6)) km/h"
@@ -78,7 +78,7 @@ public struct TodayViewModel {
         
         var windDirection: String = "-"
         if let currentTemperature = weatherResponse.list.first {
-            windDirection = Device.degToCompass(currentTemperature.wind.deg)
+            windDirection = Utils.degToCompass(currentTemperature.wind.deg)
         }
         
         var rain: String = "-"

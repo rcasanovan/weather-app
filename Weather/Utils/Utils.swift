@@ -1,5 +1,5 @@
 //
-//  Device.swift
+//  Utils.swift
 //  Weather
 //
 //  Created by Ricardo Casanova on 01/12/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Device {
+class Utils {
     
     public static func getDeviceLanguage() -> String {
         guard let languageCode = NSLocale.current.languageCode else {

@@ -114,7 +114,7 @@ extension TodayViewController {
     @objc private func shareButtonPressed() {
         var items: [Any] = [NSLocalizedString("share.message.title", comment: "")]
         
-        if let image = Device.takeScreenshot() {
+        if let image = Utils.takeScreenshot() {
             items.append(image)
         }
         

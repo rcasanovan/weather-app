@@ -37,7 +37,7 @@ enum Endpoint: EndpointProtocol {
     var rawValue: String {
         switch self {
         case .getWeatherWith(let latitude, let longitude):
-            return "/forecast?\(Url.Fields.latitude)=\(latitude)&\(Url.Fields.longitude)=\(longitude)&\(Url.Fields.appID)=\(Url.appID)&\(Url.Fields.units)=\(Device.getStringCurrentUnitTemperature())&\(Url.Fields.language)=\(Device.getDeviceLanguage())"
+            return "/forecast?\(Url.Fields.latitude)=\(latitude)&\(Url.Fields.longitude)=\(longitude)&\(Url.Fields.appID)=\(Url.appID)&\(Url.Fields.units)=\(Utils.getStringCurrentUnitTemperature())&\(Url.Fields.language)=\(Utils.getDeviceLanguage())"
         }
     }
     

@@ -40,7 +40,7 @@
 		C8926DDF21B2E15900CF19C4 /* TodayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */; };
 		C8926DE221B2E50300CF19C4 /* WeatherTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE121B2E50300CF19C4 /* WeatherTitleView.swift */; };
 		C8926DE521B2F50200CF19C4 /* UnitTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */; };
-		C8926DE721B2F57C00CF19C4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE621B2F57C00CF19C4 /* Device.swift */; };
+		C8926DE721B2F57C00CF19C4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926DE621B2F57C00CF19C4 /* Utils.swift */; };
 		C8926DED21B309EF00CF19C4 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DE921B309EF00CF19C4 /* ProximaNova-Semibold.otf */; };
 		C8926DEE21B309EF00CF19C4 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEA21B309EF00CF19C4 /* ProximaNova-Light.otf */; };
 		C8926DEF21B309EF00CF19C4 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8926DEB21B309EF00CF19C4 /* ProximaNova-Bold.otf */; };
@@ -125,7 +125,7 @@
 		C8926DDE21B2E15900CF19C4 /* TodayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInteractor.swift; sourceTree = "<group>"; };
 		C8926DE121B2E50300CF19C4 /* WeatherTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTitleView.swift; sourceTree = "<group>"; };
 		C8926DE421B2F50200CF19C4 /* UnitTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTemperature.swift; sourceTree = "<group>"; };
-		C8926DE621B2F57C00CF19C4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C8926DE621B2F57C00CF19C4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C8926DE921B309EF00CF19C4 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
 		C8926DEA21B309EF00CF19C4 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
 		C8926DEB21B309EF00CF19C4 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				C8926DB421B2BB0A00CF19C4 /* InternalNotifications.swift */,
-				C8926DE621B2F57C00CF19C4 /* Device.swift */,
+				C8926DE621B2F57C00CF19C4 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -922,7 +922,7 @@
 				C8C1195821B5538E0057746F /* ShareManager.swift in Sources */,
 				C8926E0321B3D4E900CF19C4 /* ForecastPresenter.swift in Sources */,
 				C8926DD521B2D55B00CF19C4 /* CurrentWeatherView.swift in Sources */,
-				C8926DE721B2F57C00CF19C4 /* Device.swift in Sources */,
+				C8926DE721B2F57C00CF19C4 /* Utils.swift in Sources */,
 				C8926DD121B2D00000CF19C4 /* UIView.swift in Sources */,
 				C8926DDF21B2E15900CF19C4 /* TodayInteractor.swift in Sources */,
 				C8926E1121B3EC9600CF19C4 /* ForecastViewModel.swift in Sources */,

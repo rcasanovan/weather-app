@@ -37,7 +37,7 @@ public struct ForecastViewModel {
         
         let day = Date.getWeekDayWithTimestamp(eachWeather.dt)
         
-        let temp = "\(Int(eachWeather.main.temp)) \(Device.getWeatherSymbol())"
+        let temp = "\(Int(eachWeather.main.temp)) \(Utils.getWeatherSymbol())"
         
         var description: String = "-"
         if let weather = eachWeather.weather.first {
