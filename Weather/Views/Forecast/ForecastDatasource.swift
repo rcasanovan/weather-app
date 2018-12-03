@@ -10,10 +10,20 @@ import UIKit
 
 class ForecastDatasource: NSObject {
     
-    public var items: [ForecastViewModel]
+    public var items: [ForecastViewModel] {
+        didSet {
+            dictionary = Dictionary(grouping: items, by: { $0.dt })
+            keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
+        }
+    }
+    
+    private var dictionary: Dictionary<String, [ForecastViewModel]>
+    private var keysArray: [String]
     
     public override init() {
         items = []
+        dictionary = [:]
+        keysArray = []
         super.init()
     }
 }
@@ -27,8 +37,6 @@ extension ForecastDatasource: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let dictionary = Dictionary(grouping: items, by: { $0.dt })
-        let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
         guard let elementsPerSection = dictionary[keysArray[section]] else {
             return 0
         }
@@ -41,8 +49,6 @@ extension ForecastDatasource: UITableViewDataSource, UITableViewDelegate {
             
         }
 
-        let dictionary = Dictionary(grouping: items, by: { $0.dt })
-        let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
         if let elementsPerSection = dictionary[keysArray[indexPath.section]]  {
             let viewModel = elementsPerSection[indexPath.row]
             cell.bindWithViewModel(viewModel)
@@ -53,8 +59,6 @@ extension ForecastDatasource: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = ForecastHeaderView()
-        let dictionary = Dictionary(grouping: items, by: { $0.dt })
-        let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
         if let elementsPerSection = dictionary[keysArray[section]]  {
             let viewModel = elementsPerSection[0]
             headerView.title = viewModel.day.uppercased()
