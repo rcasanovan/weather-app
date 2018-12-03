@@ -258,7 +258,7 @@ Used to store the last weather information locally (Realm)
 * [RealmSwift](https://github.com/realm/realm-cocoa) (3.7.6): A mobile database that runs directly inside phones, tablets or wearables.
 * [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift) (4.2.1): Replacement for Apple's Reachability re-written in Swift with callbacks.
 * [CollectionViewCenteredFlowLayout](https://github.com/Coeur/CollectionViewCenteredFlowLayout) (1.0.1): A layout for UICollectionView that aligns the cells to the center.
-* [Firebase](https://firebase.google.com): A Backend as aService —BaaS—.
+* [Firebase](https://firebase.google.com): A Backend as a Service —BaaS—.
 
 ## Support && contact
 
