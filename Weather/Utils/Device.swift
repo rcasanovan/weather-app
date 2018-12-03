@@ -59,4 +59,16 @@ class Device {
         return UIScreen.main.bounds.height
     }
     
+    public static func takeScreenshot() -> UIImage? {
+        var screenshotImage :UIImage?
+        guard let layer = UIApplication.shared.keyWindow?.layer else { return nil }
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
+        guard let context = UIGraphicsGetCurrentContext() else {return nil}
+        layer.render(in:context)
+        screenshotImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return screenshotImage
+    }
+    
 }

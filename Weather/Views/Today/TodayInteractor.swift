@@ -76,5 +76,5 @@ extension TodayInteractor: TodayInteractorDelegate {
     func shouldGetLocalWeatherInformation() -> Bool {
         return LocalWeatherManager.shared.localWeatherExists()
     }
-    
+        
 }

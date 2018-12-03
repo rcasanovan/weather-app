@@ -21,6 +21,7 @@ class TodayViewController: BaseViewController {
     
     private let currentWeatherView: CurrentWeatherView = CurrentWeatherView()
     private let currentWeatherInformationView: CurrentWeatherInformationView = CurrentWeatherInformationView()
+    private let shareButton: UIButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,11 @@ extension TodayViewController {
         scrollView.backgroundColor = .clear
         scrollView.clipsToBounds = false
         scrollView.alwaysBounceVertical = true
+        
+        shareButton.titleLabel?.font = UIFont.proximaNovaSemiboldWithSize(size: 16.0)
+        shareButton.setTitleColor(.orange, for: .normal)
+        shareButton.setTitle(NSLocalizedString("share.title", comment: ""), for: .normal)
+        shareButton.addTarget(self, action: #selector(shareButtonPressed), for: .touchUpInside)
     }
     
     private func configureNavigationBar() {
@@ -87,6 +93,26 @@ extension TodayViewController {
         contentView.addSubview(currentWeatherInformationView)
         contentView.addConstraintsWithFormat("H:|[v0]|", views: currentWeatherInformationView)
         contentView.addConstraintsWithFormat("V:[v0][v1(\(currentWeatherInformationView.height))]", views: currentWeatherView, currentWeatherInformationView)
+        
+        contentView.addSubview(shareButton)
+        contentView.addConstraintsWithFormat("H:[v0(100.0)]", views: shareButton)
+        contentView.addConstraintsWithFormat("V:[v0]-40.0-[v1(22.0)]", views: currentWeatherInformationView, shareButton)
+        let shareButtonCenterLayout = NSLayoutConstraint(item: shareButton, attribute: .centerX, relatedBy: .equal, toItem: contentView, attribute: .centerX, multiplier: 1.0, constant: 1.0)
+        contentView.addConstraint(shareButtonCenterLayout)
+    }
+    
+}
+
+extension TodayViewController {
+    
+    @objc private func shareButtonPressed() {
+        var items: [Any] = [NSLocalizedString("share.message.title", comment: "")]
+        
+        if let image = Device.takeScreenshot() {
+            items.append(image)
+        }
+        
+        ShareManager.shared.share(items, from: self)
     }
     
 }

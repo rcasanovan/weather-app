@@ -69,6 +69,7 @@
 		C8926E2D21B44AC800CF19C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8926E2F21B44AC800CF19C4 /* Localizable.strings */; };
 		C8926E3321B45DBB00CF19C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8926E3221B45DBA00CF19C4 /* GoogleService-Info.plist */; };
 		C8926E3621B4624600CF19C4 /* RemoteDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E3521B4624600CF19C4 /* RemoteDataBaseManager.swift */; };
+		C8C1195821B5538E0057746F /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C1195721B5538E0057746F /* ShareManager.swift */; };
 		FD0CAFF5B60C1750404E1533 /* Pods_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F78B60E204CDD6636819C5 /* Pods_WeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,7 @@
 		C8926E3121B44B2A00CF19C4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C8926E3221B45DBA00CF19C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8926E3521B4624600CF19C4 /* RemoteDataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataBaseManager.swift; sourceTree = "<group>"; };
+		C8C1195721B5538E0057746F /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -524,6 +526,7 @@
 		C8926E0821B3DA0100CF19C4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C8C1195621B5537E0057746F /* Share Manager */,
 				C8926E3421B4621700CF19C4 /* Remote Database Manager */,
 				C8926DB121B2BA5200CF19C4 /* Location Manager */,
 				C8926E1D21B423CF00CF19C4 /* Reachability */,
@@ -621,6 +624,14 @@
 				C8926E3521B4624600CF19C4 /* RemoteDataBaseManager.swift */,
 			);
 			path = "Remote Database Manager";
+			sourceTree = "<group>";
+		};
+		C8C1195621B5537E0057746F /* Share Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C8C1195721B5538E0057746F /* ShareManager.swift */,
+			);
+			path = "Share Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -908,6 +919,7 @@
 				C8926E1321B3FAF300CF19C4 /* ForecastDatasource.swift in Sources */,
 				C8926DCE21B2CC4A00CF19C4 /* ForecastViewController.swift in Sources */,
 				C8926DA521B2A9CA00CF19C4 /* NetworkHeaders.swift in Sources */,
+				C8C1195821B5538E0057746F /* ShareManager.swift in Sources */,
 				C8926E0321B3D4E900CF19C4 /* ForecastPresenter.swift in Sources */,
 				C8926DD521B2D55B00CF19C4 /* CurrentWeatherView.swift in Sources */,
 				C8926DE721B2F57C00CF19C4 /* Device.swift in Sources */,

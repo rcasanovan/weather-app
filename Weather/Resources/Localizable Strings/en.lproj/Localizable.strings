@@ -11,3 +11,6 @@
 
 "general_message.network_no_connection.title" = "Without connection to the network.";
 "general_message.network_no_connection.subtitle" = "Weather needs to connect to the internet.\nCheck the connections and try again.";
+
+"share.title" = "Share";
+"share.message.title" = "Hey!. Check the weather in my city!. You can check the app here: https://github.com/rcasanovan/weather-app";

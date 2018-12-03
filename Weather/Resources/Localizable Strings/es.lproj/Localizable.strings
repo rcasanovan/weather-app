@@ -11,3 +11,6 @@
 
 "general_message.network_no_connection.title" = "Sin conexión a la red.";
 "general_message.network_no_connection.subtitle" = "Weather necesita conexión a internet.\nVerifica tu conexión e inténtalo de nuevo.";
+
+"share.title" = "Compartir";
+"share.message.title" = "Mira el clima en mi ciudad!. Puedes descargar la app aquí: https://github.com/rcasanovan/weather-app";
