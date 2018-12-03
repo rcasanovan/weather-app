@@ -240,6 +240,7 @@ Used to store the last weather information locally (Realm)
 
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/01.png?raw=true)
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/02.png?raw=true)
+![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/03.png?raw=true)
 
 ## What's left in the demo?
 
