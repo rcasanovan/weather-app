@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Weather
+
+  Created by Ricardo Casanova on 03/12/2018.
+  Copyright © 2018 Pijp. All rights reserved.
+*/
+
+"NSLocationWhenInUseUsageDescription" = "Weather needs your permission to get your current lcoation in order to show the weather";

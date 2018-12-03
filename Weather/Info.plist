@@ -9,8 +9,6 @@
 		<string>ProximaNova-Regular.otf</string>
 		<string>ProximaNova-Semibold.otf</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Test</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
