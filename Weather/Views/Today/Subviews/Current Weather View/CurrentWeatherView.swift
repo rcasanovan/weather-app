@@ -16,7 +16,7 @@ class CurrentWeatherView: UIView {
     private let weatherLabel: UILabel = UILabel()
     
     public var height: CGFloat {
-        return 300.0
+        return Layout.height
     }
     
     override init(frame: CGRect) {
@@ -67,10 +67,16 @@ extension CurrentWeatherView {
     
     private struct Layout {
         
+        static let height: CGFloat = 300.0
+        
         struct WeatherImageView {
             static let top: CGFloat = 80.0
             static let width: CGFloat = 100.0
             static let height: CGFloat = 100.0
+        }
+        
+        struct WeatherTitleView {
+            static let top: CGFloat = 20.0
         }
         
     }
@@ -87,7 +93,7 @@ extension CurrentWeatherView {
         addConstraint(weatherImageViewCenterLayout)
         
         
-        addConstraintsWithFormat("V:[v0]-20.0-[v1(\(weatherTitleView.height))]", views: weatherImageView, weatherTitleView)
+        addConstraintsWithFormat("V:[v0]-\(Layout.WeatherTitleView.top)-[v1(\(weatherTitleView.height))]", views: weatherImageView, weatherTitleView)
         addConstraintsWithFormat("H:[v0(<=300.0)]", views: weatherTitleView)
         let weatherTitleViewCenterLayout = NSLayoutConstraint(item: weatherTitleView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 1.0)
         addConstraint(weatherTitleViewCenterLayout)
