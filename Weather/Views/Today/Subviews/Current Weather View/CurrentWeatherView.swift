@@ -77,6 +77,7 @@ extension CurrentWeatherView {
         
         struct WeatherTitleView {
             static let top: CGFloat = 20.0
+            static let width: CGFloat = 300.0
         }
         
     }
@@ -94,7 +95,7 @@ extension CurrentWeatherView {
         
         
         addConstraintsWithFormat("V:[v0]-\(Layout.WeatherTitleView.top)-[v1(\(weatherTitleView.height))]", views: weatherImageView, weatherTitleView)
-        addConstraintsWithFormat("H:[v0(<=300.0)]", views: weatherTitleView)
+        addConstraintsWithFormat("H:[v0(<=\(Layout.WeatherTitleView.width))]", views: weatherTitleView)
         let weatherTitleViewCenterLayout = NSLayoutConstraint(item: weatherTitleView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 1.0)
         addConstraint(weatherTitleViewCenterLayout)
         
