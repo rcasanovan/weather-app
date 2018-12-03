@@ -18,7 +18,7 @@ You can use
 LocationManager.shared.simulateLocation = true
 ```
 
-At didFinishLaunchingWithOptions in AppDelegate file. In this case you'll use a simulated location (50.075539, 14.437800)
+At **didFinishLaunchingWithOptions** in **AppDelegate** file. In this case you'll use a simulated location (50.075539, 14.437800)
 
 * **Q: What´s the logic to refresh the weather when you're using the app?**
 
