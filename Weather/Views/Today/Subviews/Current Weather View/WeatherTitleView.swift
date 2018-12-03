@@ -49,7 +49,7 @@ extension WeatherTitleView {
         locationArrowImageView.image = UIImage(named: "CurrentLocationArrow")
         
         cityLabel.font = UIFont.proximaNovaSemiboldWithSize(size: 17.0)
-        cityLabel.textColor = UIColor.colorWithHex(hex: "333333")
+        cityLabel.textColor = UIColor.colorWithHex(hex: "#333333")
     }
     
 }

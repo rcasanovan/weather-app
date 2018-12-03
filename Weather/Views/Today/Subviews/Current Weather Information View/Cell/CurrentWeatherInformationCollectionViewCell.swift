@@ -76,7 +76,7 @@ extension CurrentWeatherInformationCollectionViewCell {
         
         descriptionLabel.font = UIFont.proximaNovaSemiboldWithSize(size: 14.0)
         descriptionLabel.textAlignment = .center
-        descriptionLabel.textColor = UIColor.colorWithHex(hex: "333333")
+        descriptionLabel.textColor = UIColor.colorWithHex(hex: "#333333")
     }
     
     /**

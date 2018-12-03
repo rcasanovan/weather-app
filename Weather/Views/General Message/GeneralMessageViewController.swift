@@ -43,12 +43,12 @@ extension GeneralMessageViewController {
      */
     private func configureSubviews() {
         titleLabel.font = UIFont.boldSystemFont(ofSize: 40.0)
-        titleLabel.textColor = UIColor.colorWithHex(hex: "333333")
+        titleLabel.textColor = UIColor.colorWithHex(hex: "#333333")
         titleLabel.numberOfLines = 2
         titleLabel.adjustsFontSizeToFitWidth = true
         
         messageLabel.font = UIFont.systemFont(ofSize: 14.0)
-        messageLabel.textColor = UIColor.colorWithHex(hex: "333333")
+        messageLabel.textColor = UIColor.colorWithHex(hex: "#333333")
         messageLabel.numberOfLines = 2
         messageLabel.adjustsFontSizeToFitWidth = true
     }

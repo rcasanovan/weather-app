@@ -53,7 +53,7 @@ extension ForecastHeaderView {
     private func configureSubviews() {
         topSeparatorImageView.image = UIImage(named: "SeparatorLine")
         titleLabel.font = UIFont.proximaNovaLightWithSize(size: 16.0)
-        titleLabel.textColor = UIColor.colorWithHex(hex: "333333")
+        titleLabel.textColor = UIColor.colorWithHex(hex: "#333333")
         bottomSeparatorImageView.image = UIImage(named: "SeparatorLine")
     }
     
@@ -63,6 +63,16 @@ extension ForecastHeaderView {
 extension ForecastHeaderView {
     
     private struct Layout {
+        
+        struct SeparatorImageView {
+            static let height: CGFloat = 1.0
+        }
+        
+        struct TitleLabel {
+            static let leading: CGFloat = 14.0
+            static let trailing: CGFloat = 14.0
+        }
+        
     }
     
     private func addSubviews() {
@@ -71,13 +81,13 @@ extension ForecastHeaderView {
         addSubview(bottomSeparatorImageView)
         
         addConstraintsWithFormat("H:|[v0]|", views: topSeparatorImageView)
-        addConstraintsWithFormat("V:|[v0(1.0)]", views: topSeparatorImageView)
+        addConstraintsWithFormat("V:|[v0(\(Layout.SeparatorImageView.height))]", views: topSeparatorImageView)
         
-        addConstraintsWithFormat("H:|-14.0-[v0]-14.0-|", views: titleLabel)
+        addConstraintsWithFormat("H:|-\(Layout.TitleLabel.leading)-[v0]-\(Layout.TitleLabel.trailing)-|", views: titleLabel)
         addConstraintsWithFormat("V:|[v0]|", views: titleLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: bottomSeparatorImageView)
-        addConstraintsWithFormat("V:[v0(1.0)]|", views: bottomSeparatorImageView)
+        addConstraintsWithFormat("V:[v0(\(Layout.SeparatorImageView.height))]|", views: bottomSeparatorImageView)
     }
     
 }
