@@ -193,7 +193,7 @@ Reference: [Apple documentation](https://developer.apple.com/documentation/swift
 
 ### Local weather data model
 
-This model is used for save the last weather information locally
+This model is used for save the last weather information locally:
 
 ```swift
 class LocalWeather: Object {
@@ -202,6 +202,18 @@ class LocalWeather: Object {
     
     override class func primaryKey() -> String? {
         return "weatherId"
+    }
+}
+```
+
+And this one is used to generate a user with an unique user id:
+
+```swift
+class User: Object {
+    @objc dynamic var userId: String?
+    
+    override class func primaryKey() -> String? {
+        return "userId"
     }
 }
 ```
