@@ -47,11 +47,14 @@ extension TodayPresenter {
             }
             
             if let error = error {
-                self.view?.showMessageWith(title: "Oops", message: error.localizedDescription, actionTitle: "Accept")
+                self.view?.showMessageWith(title: NSLocalizedString("error.title", comment: ""), message: error.localizedDescription, actionTitle: NSLocalizedString("error.action_title", comment: ""))
                 return
             }
             
-            self.view?.showMessageWith(title: "Oops", message: "test", actionTitle: "Accept")
+            if !success {
+                self.view?.showMessageWith(title: NSLocalizedString("error.title", comment: ""), message: NSLocalizedString("error.message", comment: ""), actionTitle: NSLocalizedString("error.action_title", comment: ""))
+                return
+            }
         }
     }
     

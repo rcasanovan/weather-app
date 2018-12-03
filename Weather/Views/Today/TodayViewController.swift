@@ -53,6 +53,7 @@ extension TodayViewController {
         scrollView.backgroundColor = .clear
         scrollView.clipsToBounds = false
         scrollView.alwaysBounceVertical = true
+        scrollView.showsVerticalScrollIndicator = false
         
         shareButton.titleLabel?.font = UIFont.proximaNovaSemiboldWithSize(size: 16.0)
         shareButton.setTitleColor(.orange, for: .normal)

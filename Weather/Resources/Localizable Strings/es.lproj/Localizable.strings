@@ -14,3 +14,7 @@
 
 "share.title" = "Compartir";
 "share.message.title" = "Mira el clima en mi ciudad!. Puedes descargar la app aquí: https://github.com/rcasanovan/weather-app";
+
+"error.title" = "oops";
+"error.message" = "Algo ha ocurrido";
+"error.action_title" = "Aceptar";

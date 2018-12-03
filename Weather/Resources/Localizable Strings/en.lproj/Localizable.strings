@@ -14,3 +14,7 @@
 
 "share.title" = "Share";
 "share.message.title" = "Hey!. Check the weather in my city!. You can check the app here: https://github.com/rcasanovan/weather-app";
+
+"error.title" = "oops";
+"error.message" = "Something happened";
+"error.action_title" = "Accept";
