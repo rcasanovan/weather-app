@@ -40,7 +40,6 @@ extension TodayInteractor: TodayInteractorDelegate {
     }
     
     func getCurrentWeather(completion: @escaping getWeatherInteractorCompletionBlock) {
-        LocationManager.shared.simulateLocation = true
         guard let currenLocation = LocationManager.shared.getCurrentLocation() else {
             completion(nil, false, nil)
             return
