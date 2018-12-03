@@ -25,7 +25,7 @@ class LocationManager: NSObject {
         self.locationManager.delegate = self
     }
     
-    static let shared = LocationManager()
+    static let shared: LocationManager = { return LocationManager() }()
 
     public func requestAuthorizationIfNeeded() {
         if CLLocationManager.authorizationStatus() == .notDetermined {

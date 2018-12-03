@@ -28,7 +28,7 @@ extension TodayInteractor {
         guard let weather = weatherResponse.list.first else {
             return
         }
-        RemoteDabaBaseManager.addInformation(userId: "12345", lastTemperature: weather.main.temp, latitude: location.latitude, longitude: location.longitude, countryCode: weatherResponse.city.country)
+        RemoteDabaBaseManager.shared.addInformation(userId: "12345", lastTemperature: weather.main.temp, latitude: location.latitude, longitude: location.longitude, countryCode: weatherResponse.city.country)
     }
     
 }
