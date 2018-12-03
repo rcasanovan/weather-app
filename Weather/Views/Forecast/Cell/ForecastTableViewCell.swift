@@ -37,6 +37,10 @@ class ForecastTableViewCell: UITableViewCell {
         tempLabel.text = ""
     }
     
+    public static var height: CGFloat {
+        return Layout.height
+    }
+    
     /**
      * Bind component
      *
@@ -91,6 +95,8 @@ extension ForecastTableViewCell {
      * Internal struct for layout
      */
     private struct Layout {
+        
+        static let height: CGFloat = 88.0
         
         struct WeatherIconImageView {
             static let leading: CGFloat = 20.0

@@ -52,7 +52,7 @@ extension ForecastViewController {
         
         weatherListTableView = UITableView(frame: weatherListContainerView.bounds, style: .plain)
         weatherListTableView?.tableFooterView = UIView()
-        weatherListTableView?.estimatedRowHeight = 88.0
+        weatherListTableView?.estimatedRowHeight = ForecastTableViewCell.height
         weatherListTableView?.rowHeight = UITableView.automaticDimension
         weatherListTableView?.invalidateIntrinsicContentSize()
         weatherListTableView?.allowsSelection = false

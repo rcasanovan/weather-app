@@ -46,7 +46,6 @@ extension ForecastDatasource: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ForecastTableViewCell.identifier, for: indexPath) as? ForecastTableViewCell else {
             return UITableViewCell()
-            
         }
 
         if let elementsPerSection = dictionary[keysArray[indexPath.section]]  {

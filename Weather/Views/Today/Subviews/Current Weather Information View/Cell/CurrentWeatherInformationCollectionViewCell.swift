@@ -36,7 +36,7 @@ class CurrentWeatherInformationCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = ""
     }
     
-    public static func getSize() -> CGSize {
+    public static var size: CGSize {
         return CGSize(width: Layout.width, height: Layout.height)
     }
     

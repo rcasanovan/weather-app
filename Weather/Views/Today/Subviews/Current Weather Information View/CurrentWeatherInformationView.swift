@@ -135,7 +135,7 @@ extension CurrentWeatherInformationView {
 extension CurrentWeatherInformationView: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CurrentWeatherInformationCollectionViewCell.getSize()
+        return CurrentWeatherInformationCollectionViewCell.size
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
