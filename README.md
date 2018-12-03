@@ -208,25 +208,25 @@ As I'm using Realm for this it's important to define a class to manage each mode
 
 Reference: [Realm](https://realm.io/docs/swift/latest)
 
-### Managers
+## Managers
 
 I think using managers is a good idea but be careful!. Please don't create managers as if the world were going to end tomorrow.
 
 I'm using only 4 here:
 
-#### RemoteDabaBaseManager
+### RemoteDabaBaseManager
 
 Used to store information remotely (Firebase)
 
-#### LocationManager
+### LocationManager
 
 Used to manage all the location stuff (request auth, get the current location)
 
-#### ReachabilityManager
+### ReachabilityManager
 
 Used to manage the reachability
 
-#### LocalWeatherManager
+### LocalWeatherManager
 
 Used to store the last weather information locally (Realm)
 
