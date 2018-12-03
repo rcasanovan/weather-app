@@ -91,7 +91,7 @@ extension TodayInteractor: TodayInteractorDelegate {
         }
         
         let currentDate = Date()
-        if currentDate.hours(from: lastRefreshDate) >= 1 {
+        if currentDate.minutes(from: lastRefreshDate) >= 20 {
             return true
         }
         
