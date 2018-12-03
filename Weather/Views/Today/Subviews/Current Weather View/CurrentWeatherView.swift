@@ -80,6 +80,18 @@ extension CurrentWeatherView {
             static let width: CGFloat = 300.0
         }
         
+        struct TemperatureLabel {
+            static let leading: CGFloat = 20.0
+            static let trailing: CGFloat = 20.0
+            static let top: CGFloat = 10.0
+            static let height: CGFloat = 46.0
+        }
+        
+        struct WeatherLabel {
+            static let leading: CGFloat = 20.0
+            static let trailing: CGFloat = 20.0
+        }
+        
     }
     
     private func addSubviews() {
@@ -99,10 +111,10 @@ extension CurrentWeatherView {
         let weatherTitleViewCenterLayout = NSLayoutConstraint(item: weatherTitleView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 1.0)
         addConstraint(weatherTitleViewCenterLayout)
         
-        addConstraintsWithFormat("H:|-20.0-[v0]-20.0-|", views: temperatureLabel)
-        addConstraintsWithFormat("V:[v0]-10.0-[v1(46.0)]", views: weatherTitleView, temperatureLabel)
+        addConstraintsWithFormat("H:|-\(Layout.TemperatureLabel.leading)-[v0]-\(Layout.TemperatureLabel.trailing)-|", views: temperatureLabel)
+        addConstraintsWithFormat("V:[v0]-\(Layout.TemperatureLabel.top)-[v1(\(Layout.TemperatureLabel.height))]", views: weatherTitleView, temperatureLabel)
         
-        addConstraintsWithFormat("H:|-20.0-[v0]-20.0-|", views: weatherLabel)
+        addConstraintsWithFormat("H:|-\(Layout.WeatherLabel.leading)-[v0]-\(Layout.WeatherLabel.trailing)-|", views: weatherLabel)
         addConstraintsWithFormat("V:[v0][v1]|", views: temperatureLabel, weatherLabel)
         
         
