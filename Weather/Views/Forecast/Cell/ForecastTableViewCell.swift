@@ -92,6 +92,33 @@ extension ForecastTableViewCell {
      */
     private struct Layout {
         
+        struct WeatherIconImageView {
+            static let leading: CGFloat = 20.0
+            static let width: CGFloat = 60.0
+            static let height: CGFloat = 60.0
+            static let top: CGFloat = 14.0
+            static let bottom: CGFloat = 14.0
+        }
+        
+        struct HourLabel {
+            static let leading: CGFloat = 14.0
+            static let trailing: CGFloat = 14.0
+            static let height: CGFloat = 20.0
+            static let top: CGFloat = 24.0
+        }
+        
+        struct DescriptionLabel {
+            static let leading: CGFloat = 14.0
+            static let trailing: CGFloat = 14.0
+            static let height: CGFloat = 20.0
+        }
+        
+        struct TempLabel {
+            static let trailing: CGFloat = 20.0
+            static let top: CGFloat = 14.0
+            static let bottom: CGFloat = 14.0
+        }
+        
     }
     
     /**
@@ -103,17 +130,17 @@ extension ForecastTableViewCell {
         addSubview(descriptionLabel)
         addSubview(tempLabel)
         
-        addConstraintsWithFormat("H:|-20.0-[v0(60.0)]", views: weatherIconImageView)
-        addConstraintsWithFormat("V:|-14.0-[v0(60.0)]-14.0-|", views: weatherIconImageView)
+        addConstraintsWithFormat("H:|-\(Layout.WeatherIconImageView.leading)-[v0(\(Layout.WeatherIconImageView.width))]", views: weatherIconImageView)
+        addConstraintsWithFormat("V:|-\(Layout.WeatherIconImageView.top)-[v0(\(Layout.WeatherIconImageView.height))]-\(Layout.WeatherIconImageView.bottom)-|", views: weatherIconImageView)
         
-        addConstraintsWithFormat("H:[v0]-14.0-[v1]-14.0-[v2]", views: weatherIconImageView, hourLabel, tempLabel)
-        addConstraintsWithFormat("V:|-24.0-[v0(20.0)]", views: hourLabel)
+        addConstraintsWithFormat("H:[v0]-\(Layout.HourLabel.leading)-[v1]-\(Layout.HourLabel.trailing)-[v2]", views: weatherIconImageView, hourLabel, tempLabel)
+        addConstraintsWithFormat("V:|-\(Layout.HourLabel.top)-[v0(\(Layout.HourLabel.height))]", views: hourLabel)
         
-        addConstraintsWithFormat("H:[v0]-14.0-[v1]-14.0-[v2]", views: weatherIconImageView, descriptionLabel, tempLabel)
-        addConstraintsWithFormat("V:[v0][v1(20.0)]", views: hourLabel, descriptionLabel)
+        addConstraintsWithFormat("H:[v0]-\(Layout.DescriptionLabel.leading)-[v1]-\(Layout.DescriptionLabel.trailing)-[v2]", views: weatherIconImageView, descriptionLabel, tempLabel)
+        addConstraintsWithFormat("V:[v0][v1(\(Layout.DescriptionLabel.height))]", views: hourLabel, descriptionLabel)
         
-        addConstraintsWithFormat("H:[v0(>=0.0)]-14.0-|", views: tempLabel)
-        addConstraintsWithFormat("V:|-14.0-[v0]-14.0-|", views: tempLabel)
+        addConstraintsWithFormat("H:[v0(>=0.0)]-\(Layout.TempLabel.trailing)-|", views: tempLabel)
+        addConstraintsWithFormat("V:|-\(Layout.TempLabel.top)-[v0]-\(Layout.TempLabel.bottom)-|", views: tempLabel)
     }
     
 }
