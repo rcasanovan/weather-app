@@ -48,4 +48,20 @@ extension UIColor {
         )
     }
     
+    public class func dodgerBlue() -> UIColor {
+        return UIColor.dodgerBlue(alpha: 1.0)
+    }
+    
+    public class func dodgerBlue(alpha : CGFloat) -> UIColor {
+        return UIColor.colorWithHex(hex: "#2F91FF", alpha: alpha)
+    }
+    
+    public class func weatherBlack() -> UIColor {
+        return UIColor.weatherBlack(alpha: 1.0)
+    }
+    
+    public class func weatherBlack(alpha : CGFloat) -> UIColor {
+        return UIColor.colorWithHex(hex: "#333333", alpha: alpha)
+    }
+    
 }

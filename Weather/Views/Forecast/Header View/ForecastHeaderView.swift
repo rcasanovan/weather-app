@@ -53,7 +53,7 @@ extension ForecastHeaderView {
     private func configureSubviews() {
         topSeparatorImageView.image = UIImage(named: "SeparatorLine")
         titleLabel.font = UIFont.proximaNovaLightWithSize(size: 16.0)
-        titleLabel.textColor = UIColor.colorWithHex(hex: "#333333")
+        titleLabel.textColor = .weatherBlack()
         bottomSeparatorImageView.image = UIImage(named: "SeparatorLine")
     }
     

@@ -76,13 +76,13 @@ extension ForecastTableViewCell {
      */
     private func configureSubviews() {
         hourLabel.font = UIFont.proximaNovaBoldWithSize(size: 18.0)
-        hourLabel.textColor = UIColor.colorWithHex(hex: "#333333")
+        hourLabel.textColor = .weatherBlack()
         
         descriptionLabel.font = UIFont.proximaNovaLightWithSize(size: 18.0)
-        descriptionLabel.textColor = UIColor.colorWithHex(hex: "#333333")
+        descriptionLabel.textColor = .weatherBlack()
         
         tempLabel.font = UIFont.proximaNovaRegularWithSize(size: 44.0)
-        tempLabel.textColor = UIColor.colorWithHex(hex: "#2F91FF")
+        tempLabel.textColor = .dodgerBlue()
         tempLabel.textAlignment = .right
     }
     
