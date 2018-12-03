@@ -23,10 +23,9 @@ At didFinishLaunchingWithOptions in AppDelegate file. In this case you'll use a 
 * Q: What´s the logic to refresh the weather when you're using the app?
 
 We have a few scenarios here:
-** 1
-** 2
-
-* 3
+* You install the app: The app will get the wather information from the server
+* You open the app once installed: If more than 20 min has passed since the last synchronization, the app will get the weather information from the server. In any other case, it will display the information locally.
+* If the user has moved more than two kilometers since the last synchronization, the app will get the weather information from the server. In any other case, it will display the information locally.
 
 ## Project Architecture 
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/projectArchitecture.jpeg?raw=true)
