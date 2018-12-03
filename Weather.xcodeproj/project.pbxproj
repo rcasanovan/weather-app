@@ -71,6 +71,7 @@
 		C8926E3621B4624600CF19C4 /* RemoteDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8926E3521B4624600CF19C4 /* RemoteDataBaseManager.swift */; };
 		C8C1195821B5538E0057746F /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C1195721B5538E0057746F /* ShareManager.swift */; };
 		C8C1195B21B5855B0057746F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8C1195D21B5855B0057746F /* InfoPlist.strings */; };
+		C8C1196021B5A5630057746F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C1195F21B5A5630057746F /* User.swift */; };
 		FD0CAFF5B60C1750404E1533 /* Pods_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F78B60E204CDD6636819C5 /* Pods_WeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +161,7 @@
 		C8C1195721B5538E0057746F /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		C8C1195C21B5855B0057746F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8C1195E21B5855F0057746F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C8C1195F21B5A5630057746F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E6D06DB1D70788AE770FA691 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -551,6 +553,7 @@
 			isa = PBXGroup;
 			children = (
 				C8926E0D21B3DA6100CF19C4 /* LocalWeather.swift */,
+				C8C1195F21B5A5630057746F /* User.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -891,6 +894,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C1196021B5A5630057746F /* User.swift in Sources */,
 				C8926E0E21B3DA6100CF19C4 /* LocalWeather.swift in Sources */,
 				C8926DC521B2CB7800CF19C4 /* CustomTitleView.swift in Sources */,
 				C8926DA621B2A9CA00CF19C4 /* Result.swift in Sources */,

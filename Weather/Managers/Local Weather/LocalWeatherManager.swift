@@ -64,7 +64,7 @@ class LocalWeatherManager {
     }
     
     /**
-     * Validate if suggestion exists in the database
+     * Validate if local weather exists in the database
      */
     public func localWeatherExists() -> Bool {
         let realm = try! Realm()
@@ -74,9 +74,47 @@ class LocalWeatherManager {
         return true
     }
     
+    public func saveUserId(_ userId: String) {
+        if localUserExists() { return }
+        
+        // Create a suggestion object
+        let user = User()
+        user.userId = userId
+
+        // Get the default Realm
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.add(user)
+        }
+    }
+    
+    public func getCurrentUserId() -> String? {
+        // Get the default Realm
+        let realm = try! Realm()
+        
+        // Query Realm for all local weather
+        guard let user = realm.objects(User.self).first else {
+            return nil
+        }
+        
+        return user.userId
+    }
+    
 }
 
 extension LocalWeatherManager {
+    
+    /**
+     * Validate if local user exists in the database
+     */
+    private func localUserExists() -> Bool {
+        let realm = try! Realm()
+        guard let _ = realm.objects(User.self).first else {
+            return false
+        }
+        return true
+    }
     
     private func archive(w: WeatherResponse) -> Data? {
         do {

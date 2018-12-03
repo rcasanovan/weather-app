@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureFirebase()
+        configureUserId()
         configureNavigationBar()
         showInitialView()
         addObservers()
@@ -105,6 +106,10 @@ extension AppDelegate {
     private func configureFirebase() {
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
+    }
+    
+    private func configureUserId() {
+        LocalWeatherManager.shared.saveUserId(UUID().uuidString)
     }
     
 }

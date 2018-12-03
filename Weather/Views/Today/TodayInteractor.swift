@@ -27,18 +27,14 @@ extension TodayInteractor {
     }
     
     private func addInformationWithWeatherResponse(_ weatherResponse: WeatherResponse, location: CLLocationCoordinate2D) {
-        guard let weather = weatherResponse.list.first else {
+        guard let weather = weatherResponse.list.first, let userId = getCurrenUserId() else {
             return
         }
-        RemoteDabaBaseManager.shared.addInformation(userId: getCurrenUserId(), lastTemperature: weather.main.temp, latitude: location.latitude, longitude: location.longitude, countryCode: weatherResponse.city.country)
+        RemoteDabaBaseManager.shared.addInformation(userId: userId, lastTemperature: weather.main.temp, latitude: location.latitude, longitude: location.longitude, countryCode: weatherResponse.city.country)
     }
     
-    private func getCurrenUserId() -> String {
-        //__ IMPORTANT NOTE:
-        //__ THIS IS A FAKE VALUE IN ORDER TO CREATE THE RECORD IN THE REMOTE DATABASE
-        //__ We can change this value for a real one of we add a login process
-        //__ or another mechanism to get an unique value
-        return "XAdwA235GEda198NEgDZ"
+    private func getCurrenUserId() -> String? {
+        return LocalWeatherManager.shared.getCurrentUserId()
     }
     
 }
