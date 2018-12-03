@@ -56,7 +56,7 @@ extension TodayInteractor: TodayInteractorDelegate {
                     return
                 }
                 self.addInformationWithWeatherResponse(weather, location: currenLocation)
-                LocalWeatherManager.saveLocalWeather(weather)
+                LocalWeatherManager.shared.saveLocalWeather(weather)
                 let viewModel = TodayViewModel.getViewModelWith(weatherResponse: weather)
                 completion(viewModel, true, nil)
                 break
@@ -68,14 +68,14 @@ extension TodayInteractor: TodayInteractorDelegate {
     }
     
     func getLocalWeatherInformation() -> TodayViewModel? {
-        guard let weatherResponse = LocalWeatherManager.getLocalWeather() else {
+        guard let weatherResponse = LocalWeatherManager.shared.getLocalWeather() else {
             return nil
         }
         return TodayViewModel.getViewModelWith(weatherResponse: weatherResponse)
     }
     
     func shouldGetLocalWeatherInformation() -> Bool {
-        return LocalWeatherManager.localWeatherExists()
+        return LocalWeatherManager.shared.localWeatherExists()
     }
     
 }

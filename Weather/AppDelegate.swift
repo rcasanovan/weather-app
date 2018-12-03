@@ -74,7 +74,7 @@ extension AppDelegate  {
         }
         
         ReachabilityManager.shared.reachability?.whenUnreachable = { reachability in
-            if !LocalWeatherManager.localWeatherExists() {
+            if !LocalWeatherManager.shared.localWeatherExists() {
                 self.showReachabilityMessage(true)
             }
         }

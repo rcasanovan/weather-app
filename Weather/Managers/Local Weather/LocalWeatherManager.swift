@@ -11,13 +11,15 @@ import RealmSwift
 
 class LocalWeatherManager {
     
+    static let shared: LocalWeatherManager = { return LocalWeatherManager() }()
+    
     /**
      * Save current weather
      *
      * - parameters:
      *      -weather: current weather to save
      */
-    public static func saveLocalWeather(_ weather: WeatherResponse) {
+    public func saveLocalWeather(_ weather: WeatherResponse) {
         //Remove older local weather
         deleteLocalWeather()
         
@@ -37,7 +39,7 @@ class LocalWeatherManager {
     /**
      * Get local weather data
      */
-    public static func getLocalWeather() -> WeatherResponse? {
+    public func getLocalWeather() -> WeatherResponse? {
         // Get the default Realm
         let realm = try! Realm()
         
@@ -52,7 +54,7 @@ class LocalWeatherManager {
     /**
      * Delete all local weather data
      */
-    public static func deleteLocalWeather() {
+    public func deleteLocalWeather() {
         let realm = try! Realm()
         let localWeather = realm.objects(LocalWeather.self)
         
@@ -64,7 +66,7 @@ class LocalWeatherManager {
     /**
      * Validate if suggestion exists in the database
      */
-    public static func localWeatherExists() -> Bool {
+    public func localWeatherExists() -> Bool {
         let realm = try! Realm()
         guard let localWeather = realm.objects(LocalWeather.self).first, let _ = localWeather.weatherData else {
             return false
@@ -76,7 +78,7 @@ class LocalWeatherManager {
 
 extension LocalWeatherManager {
     
-    private static func archive(w: WeatherResponse) -> Data? {
+    private func archive(w: WeatherResponse) -> Data? {
         do {
             let jsonData = try JSONEncoder().encode(w)
             return jsonData
@@ -85,7 +87,7 @@ extension LocalWeatherManager {
         return nil
     }
     
-    private static func unarchive(d: Data) -> WeatherResponse? {
+    private func unarchive(d: Data) -> WeatherResponse? {
         do {
             let decodedWeather = try JSONDecoder().decode(WeatherResponse.self, from: d)
             return decodedWeather

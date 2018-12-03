@@ -14,7 +14,7 @@ class ForecastInteractor {
 extension ForecastInteractor: ForecastInteractorDelegate {
     
     func getWeatherInformation() -> [ForecastViewModel]? {
-        guard let weatherResponse = LocalWeatherManager.getLocalWeather() else {
+        guard let weatherResponse = LocalWeatherManager.shared.getLocalWeather() else {
             return nil
         }
         return ForecastViewModel.getViewModelsWith(weatherResponse: weatherResponse)
