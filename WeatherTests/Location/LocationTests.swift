@@ -20,8 +20,8 @@ class LocationTests: XCTestCase {
     }
 
     func testSimulateLocation() {
-        LocationManager.sharedInstance.simulateLocation = true
-        let currentLocation = LocationManager.sharedInstance.getCurrentLocation()
+        LocationManager.shared.simulateLocation = true
+        let currentLocation = LocationManager.shared.getCurrentLocation()
         XCTAssert(currentLocation?.latitude == 39.470242 && currentLocation?.longitude == -0.376800, "Error getting the simulate location (Valencia, Spain)")
     }
 

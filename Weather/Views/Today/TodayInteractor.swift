@@ -36,12 +36,12 @@ extension TodayInteractor {
 extension TodayInteractor: TodayInteractorDelegate {
     
     func requestLocationAuthorizationIfNeeded() {
-        LocationManager.sharedInstance.requestAuthorizationIfNeeded()
+        LocationManager.shared.requestAuthorizationIfNeeded()
     }
     
     func getCurrentWeather(completion: @escaping getWeatherInteractorCompletionBlock) {
-        LocationManager.sharedInstance.simulateLocation = true
-        guard let currenLocation = LocationManager.sharedInstance.getCurrentLocation() else {
+        LocationManager.shared.simulateLocation = true
+        guard let currenLocation = LocationManager.shared.getCurrentLocation() else {
             completion(nil, false, nil)
             return
         }
