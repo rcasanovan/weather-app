@@ -8,3 +8,6 @@
 
 "today.title" = "Hoy";
 "forecast.title" = "Pronóstico";
+
+"general_message.network_no_connection.title" = "Sin conexión a la red.";
+"general_message.network_no_connection.subtitle" = "Weather necesita conexión a internet.\nVerifica tu conexión e inténtalo de nuevo.";

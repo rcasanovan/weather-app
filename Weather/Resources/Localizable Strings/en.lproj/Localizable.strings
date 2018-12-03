@@ -8,3 +8,6 @@
 
 "today.title" = "Today";
 "forecast.title" = "Forecast";
+
+"general_message.network_no_connection.title" = "Without connection to the network.";
+"general_message.network_no_connection.subtitle" = "Weather needs to connect to the internet.\nCheck the connections and try again.";

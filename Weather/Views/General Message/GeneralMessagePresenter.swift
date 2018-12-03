@@ -34,9 +34,9 @@ extension GeneralMessagePresenter: GeneralMessagePresenterDelegate {
     func viewDidLoad() {
         switch type {
         case .NoInternetConnection:
-            view?.load(title: "Without connection to the network.", message: "XINGRepos needs to connect to the internet.\nCheck the connections and try again.")
+            view?.load(title: NSLocalizedString("general_message.network_no_connection.title", comment: ""), message: NSLocalizedString("general_message.network_no_connection.subtitle", comment: ""))
             break
         }
     }
-    
+
 }
