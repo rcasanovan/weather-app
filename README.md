@@ -241,7 +241,7 @@ Used to store the last weather information locally (Realm)
 
 ## What's left in the demo?
 
-* Deny location permission logic: The logic to manage if the user deny the location permission is not defined. Maybe I could show a message to the user in this case.
+* Location permission logic denied: The logic to manage if the user deny the location permission is not defined. Maybe I could show a message to the user in this case.
 * Realm migration process: It would be nice to add a process to migrate the realm database to a new model (just in case you need to add a new field into the database)
 
 ## Programming languages && Development tools
