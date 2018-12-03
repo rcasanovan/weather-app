@@ -10,8 +10,22 @@ If you have any doubt about cocoapods you can check the reference [here](https:/
 
 ## FAQS 🤔
 
-* 1
-* 2
+* Q: I want to test the project using the Xcode simulator. How could I get a location (latitude, longitude)?.
+
+You can use 
+
+```swift
+LocationManager.shared.simulateLocation = true
+```
+
+At didFinishLaunchingWithOptions in AppDelegate file. In this case you'll use a simulated location (50.075539, 14.437800)
+
+* Q: What´s the logic to refresh the weather when you're using the app?
+
+We have a few scenarios here:
+** 1
+** 2
+
 * 3
 
 ## Project Architecture 
