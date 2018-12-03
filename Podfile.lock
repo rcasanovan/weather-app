@@ -100,7 +100,6 @@ PODS:
   - Realm/Headers (3.7.6)
   - RealmSwift (3.7.6):
     - Realm (= 3.7.6)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - CollectionViewCenteredFlowLayout (~> 1.0.1)
@@ -108,7 +107,6 @@ DEPENDENCIES:
   - Firebase/Firestore
   - ReachabilitySwift (~> 4.2.1)
   - RealmSwift (~> 3.7.6)
-  - SVProgressHUD (~> 2.2.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -132,7 +130,6 @@ SPEC REPOS:
     - ReachabilitySwift
     - Realm
     - RealmSwift
-    - SVProgressHUD
 
 SPEC CHECKSUMS:
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
@@ -155,8 +152,7 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 35720ffea59c1c76d15f885be77fd33e33985427
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
   RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 0fd22e9af4467aba28b33fb9a2779765c444de89
+PODFILE CHECKSUM: b006a47af51222821c7e46fc092004a141e48bed
 
 COCOAPODS: 1.5.3

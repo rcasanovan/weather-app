@@ -7,9 +7,6 @@ inhibit_all_warnings!
 #link_with 'Weather', 'WeatherTests'
 
 def weatherPods
-    #SVProgressHUD
-    pod 'SVProgressHUD', '~> 2.2.5'
-    
     #CollectionViewCenteredFlowLayout
     pod 'CollectionViewCenteredFlowLayout', '~> 1.0.1'
     
