@@ -20,10 +20,8 @@ public struct WeatherListResponse: Codable {
     let dt: Double
     let main: WeatherListMainResponse
     let weather: [WeatherListWeatherResponse]
-    let clouds: WeatherListCloudsResponse
     let wind: WeatherListWindResponse
     let rain: WeatherRainResponse?
-    let dt_txt: String
 }
 
 public struct WeatherRainResponse: Codable {
@@ -50,10 +48,6 @@ public struct WeatherListWeatherResponse: Codable {
     let main: String
     let description: String
     let icon: String
-}
-
-public struct WeatherListCloudsResponse: Codable {
-    let all: Int
 }
 
 public struct WeatherListWindResponse: Codable {
