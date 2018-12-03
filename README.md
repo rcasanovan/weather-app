@@ -238,8 +238,13 @@ Used to store the last weather information locally (Realm)
 
 ## How it looks like?
 
+### Today weather
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/01.png?raw=true)
+
+### Forecast
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/02.png?raw=true)
+
+### No internet connection
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/03.png?raw=true)
 
 ## What's left in the demo?
