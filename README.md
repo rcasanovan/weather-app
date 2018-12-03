@@ -10,7 +10,7 @@ If you have any doubt about cocoapods you can check the reference [here](https:/
 
 ## FAQS 🤔
 
-* Q: I want to test the project using the Xcode simulator. How could I get a location (latitude, longitude)?.
+* Q: I want to test the project using the Xcode simulator. How could I get a location (latitude, longitude)?
 
 You can use 
 
@@ -26,6 +26,11 @@ We have a few scenarios here:
 * You install the app: The app will get the wather information from the server
 * You open the app once installed: If more than 20 min has passed since the last synchronization, the app will get the weather information from the server. In any other case, it will display the information locally.
 * If the user has moved more than two kilometers since the last synchronization, the app will get the weather information from the server. In any other case, it will display the information locally.
+
+* Q: Wich information is shared using the app?
+
+If the user decided to press the share option he / she will be able to share a simple text with link to this repo and a screenshot of the Today screen.
+
 
 ## Project Architecture 
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/projectArchitecture.jpeg?raw=true)
