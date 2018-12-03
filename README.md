@@ -8,6 +8,12 @@ This project is using cocoapods but a gitignore file is there so the third-party
 
 If you have any doubt about cocoapods you can check the reference [here](https://cocoapods.org).
 
+## FAQS 🤔
+
+* 1
+* 2
+* 3
+
 ## Project Architecture 
 ![alt tag](https://github.com/rcasanovan/weather-app/blob/master/Images/projectArchitecture.jpeg?raw=true)
 
