@@ -16,7 +16,7 @@ class LocationManager: NSObject {
     private var currentLocation: CLLocation?
     
     private struct Configuration {
-        static let maxDistanceInMeters: Double = 50.0
+        static let maxDistanceInMeters: Double = 1000.0
     }
     
     private override init() {
@@ -52,6 +52,7 @@ class LocationManager: NSObject {
         let distanceInMeters = getDistanceToLocation(realLocation)
         if distanceInMeters > Configuration.maxDistanceInMeters {
             self.currentLocation = realLocation
+            NotificationCenter.default.post(name: .currentLocationChanged, object: nil)
         }
         
         return self.currentLocation?.coordinate

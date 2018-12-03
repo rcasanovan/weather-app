@@ -27,17 +27,22 @@ extension TodayPresenter {
     
     private func registerInternalNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(locationAllowed), name: .locationAllowed, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(currenLocationChanged), name: .currentLocationChanged, object: nil)
     }
     
     @objc private func locationAllowed() {
-        getCurrentWeatherInformation()
-    }
-    
-    private func getCurrentWeatherInformation() {
         if !interactor.shouldGetRemoteWeatherInformation() {
             return
         }
         
+        getCurrentWeatherInformation()
+    }
+    
+    @objc private func currenLocationChanged() {
+        getCurrentWeatherInformation()
+    }
+    
+    private func getCurrentWeatherInformation() {
         interactor.getCurrentWeather { [weak self] (viewModel, success, error) in
             guard let `self` = self else { return }
             

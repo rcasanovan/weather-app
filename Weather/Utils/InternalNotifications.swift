@@ -11,4 +11,5 @@ import Foundation
 extension Notification.Name {
     static let locationAllowed = Notification.Name("locationAllowed")
     static let locationDenied = Notification.Name("locationDenied")
+    static let currentLocationChanged = Notification.Name("currentLocationChanged")
 }
