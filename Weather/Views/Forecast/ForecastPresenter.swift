@@ -34,7 +34,7 @@ extension ForecastPresenter {
 
 extension ForecastPresenter: ForecastPresenterDelegate {
     
-    func viewDidLoad() {
+    func viewDidDidAppear() {
         getLocalWeatherInformation()
     }
     
