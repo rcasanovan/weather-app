@@ -34,6 +34,10 @@ extension TodayPresenter {
     }
     
     private func getCurrentWeatherInformation() {
+        if !interactor.shouldGetRemoteWeatherInformation() {
+            return
+        }
+        
         interactor.getCurrentWeather { [weak self] (viewModel, success, error) in
             guard let `self` = self else { return }
             
@@ -42,12 +46,12 @@ extension TodayPresenter {
                 return
             }
             
-            if let _ = error {
-                print("TO DO")
+            if let error = error {
+                self.view?.showMessageWith(title: "Oops", message: error.localizedDescription, actionTitle: "Accept")
                 return
             }
             
-            print("TO DO")
+            self.view?.showMessageWith(title: "Oops", message: "test", actionTitle: "Accept")
         }
     }
     
@@ -68,6 +72,9 @@ extension TodayPresenter: TodayPresenterDelegate {
     func viewDidLoad() {
         validateLocalData()
         registerInternalNotifications()
+    }
+    
+    func viewDidAppear() {
         interactor.requestLocationAuthorizationIfNeeded()
     }
     

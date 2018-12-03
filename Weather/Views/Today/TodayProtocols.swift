@@ -11,10 +11,12 @@ import Foundation
 // View / Presenter
 protocol TodayViewInjection : class {
     func loadWeatherInformationWithViewModel(_ viewModel: TodayViewModel)
+    func showMessageWith(title: String, message: String, actionTitle: String)
 }
 
 protocol TodayPresenterDelegate : class {
     func viewDidLoad()
+    func viewDidAppear()
 }
 
 // Presenter / Interactor
@@ -25,4 +27,5 @@ protocol TodayInteractorDelegate : class {
     func getCurrentWeather(completion: @escaping getWeatherInteractorCompletionBlock)
     func getLocalWeatherInformation() -> TodayViewModel?
     func shouldGetLocalWeatherInformation() -> Bool
+    func shouldGetRemoteWeatherInformation() -> Bool
 }

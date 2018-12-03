@@ -29,6 +29,11 @@ class TodayViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.viewDidAppear()
+    }
+    
 }
 
 // MARK: - Setup views
@@ -122,6 +127,10 @@ extension TodayViewController: TodayViewInjection {
     func loadWeatherInformationWithViewModel(_ viewModel: TodayViewModel) {
         currentWeatherView.bindWithViewModel(viewModel)
         currentWeatherInformationView.bindWithViewModel(viewModel)
+    }
+    
+    func showMessageWith(title: String, message: String, actionTitle: String) {
+        showAlertWith(title: title, message: message, actionTitle: actionTitle)
     }
     
 }

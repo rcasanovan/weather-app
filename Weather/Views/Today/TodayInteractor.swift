@@ -12,6 +12,7 @@ import CoreLocation
 class TodayInteractor {
     
     private let requestManager = RequestManager()
+    private var lastRefreshDate: Date?
     
 }
 
@@ -57,6 +58,7 @@ extension TodayInteractor: TodayInteractorDelegate {
                 self.addInformationWithWeatherResponse(weather, location: currenLocation)
                 LocalWeatherManager.shared.saveLocalWeather(weather)
                 let viewModel = TodayViewModel.getViewModelWith(weatherResponse: weather)
+                self.lastRefreshDate = Date()
                 completion(viewModel, true, nil)
                 break
             case .failure(let error):
@@ -75,6 +77,19 @@ extension TodayInteractor: TodayInteractorDelegate {
     
     func shouldGetLocalWeatherInformation() -> Bool {
         return LocalWeatherManager.shared.localWeatherExists()
+    }
+    
+    func shouldGetRemoteWeatherInformation() -> Bool {
+        guard let lastRefreshDate = lastRefreshDate else {
+            return true
+        }
+        
+        let currentDate = Date()
+        if currentDate.hours(from: lastRefreshDate) >= 1 {
+            return true
+        }
+        
+        return false
     }
         
 }

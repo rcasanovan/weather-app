@@ -61,4 +61,26 @@ extension BaseViewController {
         view.addConstraintsWithFormat("V:|[v0(\(Layout.TopSeparatorImageView.height))]", views: topSeparatorImageView)
     }
     
+    /**
+     * Show alert
+     *
+     * - parameters:
+     *      -title: title for the aler
+     *      -message: message for the alert
+     *      -actionTitle: action title for the alert
+     */
+    public func showAlertWith(title: String, message: String, actionTitle: String) {
+        let alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(
+            title: actionTitle,
+            style: .default,
+            handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }

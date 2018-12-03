@@ -30,7 +30,16 @@ class LocationManager: NSObject {
     public func requestAuthorizationIfNeeded() {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
+            return
         }
+        
+        if CLLocationManager.authorizationStatus() == .denied {
+            NotificationCenter.default.post(name: .locationDenied, object: nil)
+            return
+        }
+        
+        NotificationCenter.default.post(name: .locationAllowed, object: nil)
+        
     }
     
     public func getCurrentLocation() -> CLLocationCoordinate2D? {
