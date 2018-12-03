@@ -90,6 +90,16 @@ extension CurrentWeatherInformationView {
             static let edgeSpacingRight: CGFloat = 20.0
         }
         
+        struct SeparatorImageView {
+            static let width: CGFloat = 111.0
+            static let height: CGFloat = 1.0
+            static let top: CGFloat = 30.0
+        }
+        
+        struct InfoContainerView {
+            static let width: CGFloat = 320.0
+        }
+        
     }
     
     private func addSubviews() {
@@ -97,17 +107,17 @@ extension CurrentWeatherInformationView {
         addSubview(bottomSeparatorImageView)
         addSubview(infoContainerView)
         
-        addConstraintsWithFormat("H:[v0(111.0)]", views: topSeparatorImageView)
-        addConstraintsWithFormat("V:|-30.0-[v0(1.0)]", views: topSeparatorImageView)
+        addConstraintsWithFormat("H:[v0(\(Layout.SeparatorImageView.width))]", views: topSeparatorImageView)
+        addConstraintsWithFormat("V:|-\(Layout.SeparatorImageView.top)-[v0(\(Layout.SeparatorImageView.height))]", views: topSeparatorImageView)
         let topSeparatorCenterLayout = NSLayoutConstraint(item: topSeparatorImageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 1.0)
         addConstraint(topSeparatorCenterLayout)
         
-        addConstraintsWithFormat("H:[v0(111.0)]", views: bottomSeparatorImageView)
-        addConstraintsWithFormat("V:[v0(1.0)]|", views: bottomSeparatorImageView)
+        addConstraintsWithFormat("H:[v0(\(Layout.SeparatorImageView.width))]", views: bottomSeparatorImageView)
+        addConstraintsWithFormat("V:[v0(\(Layout.SeparatorImageView.height))]|", views: bottomSeparatorImageView)
         let bottomSeparatorCenterLayout = NSLayoutConstraint(item: bottomSeparatorImageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 1.0)
         addConstraint(bottomSeparatorCenterLayout)
         
-        addConstraintsWithFormat("H:[v0(320.0)]", views: infoContainerView)
+        addConstraintsWithFormat("H:[v0(\(Layout.InfoContainerView.width))]", views: infoContainerView)
         addConstraintsWithFormat("V:[v0][v1][v2]", views: topSeparatorImageView, infoContainerView, bottomSeparatorImageView)
         let infoContainerCenterLayout = NSLayoutConstraint(item: infoContainerView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 1.0)
         addConstraint(infoContainerCenterLayout)
@@ -125,7 +135,7 @@ extension CurrentWeatherInformationView {
 extension CurrentWeatherInformationView: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80.0, height: 55.0)
+        return CurrentWeatherInformationCollectionViewCell.getSize()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -27,7 +27,6 @@ extension CurrentWeatherInformationDatasource: UICollectionViewDataSource {
         return 5
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CurrentWeatherInformationCollectionViewCell.identifier, for: indexPath) as? CurrentWeatherInformationCollectionViewCell else {
             return UICollectionViewCell()

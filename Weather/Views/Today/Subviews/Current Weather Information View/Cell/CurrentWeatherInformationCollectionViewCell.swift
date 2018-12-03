@@ -36,6 +36,10 @@ class CurrentWeatherInformationCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = ""
     }
     
+    public static func getSize() -> CGSize {
+        return CGSize(width: Layout.width, height: Layout.height)
+    }
+    
     public func bindWith(image: UIImage?, description: String) {
         iconImageView.image = image
         descriptionLabel.text = description
@@ -51,10 +55,8 @@ extension CurrentWeatherInformationCollectionViewCell {
      */
     private struct Layout {
         
-        struct ratio {
-            static let width: CGFloat = 156.0
-            static let height: CGFloat = 237.0
-        }
+        static let width: CGFloat = 80.0
+        static let height: CGFloat = 55.0
         
     }
     
@@ -75,12 +77,6 @@ extension CurrentWeatherInformationCollectionViewCell {
         descriptionLabel.font = UIFont.proximaNovaSemiboldWithSize(size: 14.0)
         descriptionLabel.textAlignment = .center
         descriptionLabel.textColor = UIColor.colorWithHex(hex: "333333")
-    }
-    
-    /**
-     * Reset all the content for the cell
-     */
-    private func resetContent() {
     }
     
     /**
