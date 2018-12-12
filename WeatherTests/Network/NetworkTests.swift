@@ -17,12 +17,12 @@ class NetworkTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        LocalWeatherManager.deleteLocalWeather()
+        LocalWeatherManager.shared.deleteLocalWeather()
     }
     
     override func tearDown() {
         super.tearDown()
-        LocalWeatherManager.deleteLocalWeather()
+        LocalWeatherManager.shared.deleteLocalWeather()
     }
     
     func testGetWeatherWith(latitude: CGFloat, longitude: CGFloat, localJSONFile: String? = nil, completion: @escaping getWeatherCompletionBlock) {
@@ -111,9 +111,9 @@ class NetworkTests: XCTestCase {
                     XCTFail("Impossible to get the weather response")
                     return
                 }
-                LocalWeatherManager.saveLocalWeather(weatherResponse)
+                LocalWeatherManager.shared.saveLocalWeather(weatherResponse)
                 
-                let localWeather = LocalWeatherManager.getLocalWeather()
+                let localWeather = LocalWeatherManager.shared.getLocalWeather()
                 XCTAssert(localWeather != nil, "Impossible to get the local weather response")
             case .failure(let error):
                 XCTFail(error.localizedDescription)
