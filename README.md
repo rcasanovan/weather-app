@@ -8,6 +8,12 @@ This project is using cocoapods but a gitignore file is there so the third-party
 
 If you have any doubt about cocoapods you can check the reference [here](https://cocoapods.org).
 
+To run the project you just need to add your APP ID in EndPoint swift file
+
+```swift
+static let appID: String = "ADD YOUR API ID HERE"
+```
+
 ## FAQS 🤔
 
 * **Q: I want to test the project using the Xcode simulator. How could I get a location (latitude, longitude)?**
